@@ -148,6 +148,7 @@
   }
   .cart-items-promobox input {
     width: 100%;
+    font-size: 14px;
   }
   .cart-items-promobox button {
     width: 125px;

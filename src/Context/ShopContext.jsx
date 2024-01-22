@@ -1,45 +1,57 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
-import { createContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import allProducts from "../Components/Assets/allProducts";
 
 export const ShopContext = createContext();
 
 let defaultCart = Array.from({ length: allProducts.length }, (_, i) => ({
   id: i + 1,
-  units: 0,
-  marime: "",
+  s: 0,
+  m: 0,
+  l: 0,
+  xl: 0,
+  xxl: 0,
 }));
+
+
 
 const AppContext = ({ children }) => {
   const [cartItems, setCartItems] = useState(defaultCart);
+  const [activeSize, setActiveSize] = useState()
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  const addToCart = (itemId) => {
+   
+  const handleSelectedSize = (size) =>{
+    setActiveSize(size)
+}
+
+
+  const handleAddToCart = (itemId) => {
+    activeSize &&
     setCartItems((prev) =>
       prev.map((object) =>
-        object.id === itemId ? { ...object, units: object.units + 1 } : object
+        object.id === itemId ? { ...object, [activeSize]: object[activeSize] + 1 } : object
       )
     );
   };
 
-console.log(cartItems)
+  const removeFromCart = (product, size) => {
 
-  const removeFromCart = (itemId) => {
+    console.log(cartItems, product)
     setCartItems((prev) =>
-      prev.map((object) =>
-        object.id === itemId ? { ...object, units: object.units - 1 } : object
-      )
-    );
-  };
-
-  const totalQuantity = cartItems.reduce(
-    (total, item) => (total += item.units),
-    0
+    prev.map((object) =>
+      object.id === product.id ? { ...object, [size]: object[size] - 1 } : object
+    )
   );
+  };
+
+  const totalQuantity = cartItems.reduce((total, item) => {
+    total += item.s + item.m + item.l + item.xl + item.xxl;
+    return total;
+  }, 0);
+  
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
@@ -57,9 +69,12 @@ console.log(cartItems)
     allProducts,
     cartItems,
     totalQuantity,
-    addToCart,
+    activeSize,
+    handleSelectedSize,
+    handleAddToCart,
     removeFromCart,
     getTotalCartAmount,
+    setActiveSize
   };
 
   return (

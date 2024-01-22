@@ -15,6 +15,9 @@ function CartItems() {
     setPromoCode("");
   };
 
+  const itemsWithIdZero = cartItems.map(item => ({ ...item, id: 0 }))
+  /*pentru a putea itera prin fiecare obiect si a afisa toate marimile, id-ul nu va fi luat in calcul la iterare*/ 
+
   return (
     <div className="cart-items">
       <div className="cart-items-format-main">
@@ -27,8 +30,11 @@ function CartItems() {
       </div>
       <hr />
       {allProducts.map((e, i) => {
-        if (cartItems[i].units) {
-          return (
+       const eachProduct = itemsWithIdZero[i]
+       let sizeDivs = []
+      for (let size in eachProduct) 
+        if (eachProduct[size] > 0) {
+          sizeDivs = sizeDivs.concat(
             <div key={crypto.randomUUID()}>
               <div className="cart-items-format cart-items-format-main">
                 <div>
@@ -40,17 +46,17 @@ function CartItems() {
                     />
                   </Link>
                 </div>
-                <p>{e.name}</p>
+                <p>{`${e.name} ${size.toUpperCase()}`}</p>
                 <p>{e.new_price} lei</p>
                 <button className="cart-items-quantity">
-                  {cartItems[i].units}
+                  {eachProduct[size]}
                 </button>
-                <p>{e.new_price * cartItems[i].units} lei</p>
+                <p>{e.new_price * eachProduct[size]} lei</p>
                 <div>
                   <img
                     className="cart-items-remove-icon"
                     onClick={() => {
-                      removeFromCart(e.id);
+                      removeFromCart({...eachProduct, id: e.id}, size);
                     }}
                     src={remove_icon}
                     alt=""
@@ -61,7 +67,7 @@ function CartItems() {
             </div>
           );
         }
-        return null;
+        return sizeDivs.length > 0? sizeDivs : null;
       })}
       <div className="cart-items-down">
         <div className="cart-items-total">

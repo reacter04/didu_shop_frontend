@@ -55,7 +55,7 @@ function Navbar() {
         </Link>
         <Link to="/cart">
           <img src={cart_icon} alt="cartIcon" />
-          <div className="nav-cart-count">{totalQuantity}</div>{" "}
+          <div className="nav-cart-count">{totalQuantity}</div>
         </Link>
       </div>
     </div>

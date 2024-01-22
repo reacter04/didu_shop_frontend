@@ -1,4 +1,4 @@
-import React, { useContext, useState} from "react";
+import React, { useContext, useEffect} from "react";
 import "./ProductDisplay.css";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
@@ -6,10 +6,10 @@ import { ShopContext } from "../../Context/ShopContext";
 
 function ProductDisplay({ product }) {
 
-   const {addToCart} = useContext(ShopContext)
-   const [activeSize, setActiveSize] = useState("")
+   const {handleAddToCart, handleSelectedSize, activeSize ,setActiveSize} = useContext(ShopContext)
    
-
+   useEffect(()=>{setActiveSize("")}, [setActiveSize])
+  
   return (
     <div className="product-display">
       <div className="product-display-left">
@@ -46,14 +46,16 @@ Puloverul nostru tricotat din bumbac organic reprezintă echilibrul perfect înt
 <div className="product-display-right-size">
     <h1>Select size:</h1>
     <div className="product-display-right-sizes">
-        <div onClick={()=>setActiveSize("S")} className={activeSize === "S"? "active-size" : ""}>S</div>
-        <div onClick={()=>setActiveSize("M")} className={activeSize === "M"? "active-size" : ""}>M</div>
-        <div onClick={()=>setActiveSize("L")} className={activeSize === "L"? "active-size" : ""}>L</div>
-        <div onClick={()=>setActiveSize("XL")} className={activeSize === "XL"? "active-size" : ""}>XL</div>
-        <div onClick={()=>setActiveSize("XXL")} className={activeSize === "XXL"? "active-size" : ""}>XXL</div>
+        <div onClick={()=>handleSelectedSize("s")} className={activeSize === "s"? "active-size" : ""}>S</div>
+        <div onClick={()=>handleSelectedSize("m")} className={activeSize === "m"? "active-size" : ""}>M</div>
+        <div onClick={()=>handleSelectedSize("l")} className={activeSize === "l"? "active-size" : ""}>L</div>
+        <div onClick={()=>handleSelectedSize("xl")} className={activeSize === "xl"? "active-size" : ""}>XL</div>
+        <div onClick={()=>handleSelectedSize("xxl")} className={activeSize === "xxl"? "active-size" : ""}>XXL</div>
     </div>
 </div>
-<button onClick={()=>{addToCart(product.id)}}>ADAUGA IN COS</button>
+<div className="add-to-cart-container">
+<button className="add-to-cart-btn" onClick={()=>{handleAddToCart(product.id)}}>ADAUGA IN COS{!activeSize && <span className="add-to-cart-info">Alege marimea</span>}</button>
+</div>
 <p className="product-display-right-category"><span>Categoria: </span>Femeie, Bluza, Scurta</p>
 <p className="product-display-right-category"><span>Taguri: </span>modern, original, nou</p>
         </div>
