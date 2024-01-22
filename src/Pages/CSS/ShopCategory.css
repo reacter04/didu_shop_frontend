@@ -7,7 +7,6 @@
 .shop-category-index-sort {
     display: flex;
     margin: 0 170px;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -15,6 +14,11 @@
     padding: 10px 20px;
     border-radius: 40px;
     border: 1px solid #888;
+}
+
+.shop-category-index-sort p {
+    margin-right: 20px;
+
 }
 
 .shop-category-index-sort p span {

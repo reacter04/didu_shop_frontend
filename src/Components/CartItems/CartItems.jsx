@@ -1,11 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import "./CartItems.css";
 import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../Assets/cart_cross_icon.png";
 
 function CartItems() {
+  const [promoCode, setPromoCode] = useState("");
+
   const { getTotalCartAmount, allProducts, cartItems, removeFromCart } =
     useContext(ShopContext);
+
+  const handleSubmitPromoCode = (e) => {
+    e.preventDefault();
+    setPromoCode("");
+  };
 
   return (
     <div className="cart-items">
@@ -23,13 +31,13 @@ function CartItems() {
           return (
             <div key={crypto.randomUUID()}>
               <div className="cart-items-format cart-items-format-main">
-                <img className="cart-icon-product-icon" src={e.image} alt="" />
+                <Link to={`/product/${allProducts.id}`}><img className="cart-icon-product-icon" src={e.image} alt="" /></Link>
                 <p>{e.name}</p>
-                <p>${e.new_price}</p>
+                <p>{e.new_price} lei</p>
                 <button className="cart-items-quantity">
                   {cartItems[e.id]}
                 </button>
-                <p>{e.new_price * cartItems[e.id]}</p>
+                <p>{e.new_price * cartItems[e.id]} lei</p>
                 <div>
                   <img
                     className="cart-items-remove-icon"
@@ -53,27 +61,44 @@ function CartItems() {
           <div>
             <div className="cart-items-total-item">
               <p>Suma totala</p>
-              <p>${getTotalCartAmount()}</p>
+              <p>{getTotalCartAmount()} lei</p>
             </div>
             <hr />
             <div className="cart-items-total-item">
               <p>Costul livarii</p>
-              <p>Gratis</p>
+              <p>
+                {getTotalCartAmount() && getTotalCartAmount() < 1000
+                  ? "50 lei"
+                  : "Gratis"}
+              </p>
             </div>
             <hr />
             <div className="cart-items-total-item">
               <h3>Total</h3>
-              <h3>${0}</h3>
+              <h3>
+                {getTotalCartAmount() && getTotalCartAmount() < 1000
+                  ? `${getTotalCartAmount() + 50}`
+                  : `${getTotalCartAmount()}`}{" "}
+              </h3>
             </div>
           </div>
           <button>Finalizeaza comanda</button>
         </div>
         <div className="cart-items-promocode">
-          <p>Daca aveti un cod promotional introduceti-l aici</p>
-          <div className="cart-items-promobox">
-            <input type="text" placeholder="Codul promotional" />
-            <button>Trimite</button>
-          </div>
+          <form onSubmit={handleSubmitPromoCode} action="">
+            <p>Daca aveti un cod promotional introduceti-l aici</p>
+            <div className="cart-items-promobox">
+              <input
+                type="text"
+                placeholder="Codul promotional din 12 caractere"
+                value={promoCode}
+                onChange={(e) =>
+                  e.target.value.length <= 12 && setPromoCode(e.target.value)
+                }
+              />
+              <button>Trimite</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import { ShopContext } from "../../Context/ShopContext";
 import dropdown_icon from "../Assets/nav_dropdown.png";
 
 function Navbar() {
-  const [activItemMenu, setActivItemMenu] = useState("");
+  const [activItemMenu, setActivItemMenu] = useState("shop");
   const { getTotalQuantity } = useContext(ShopContext);
   const menuRef = useRef();
   const dropDownToggle = (e) => {

@@ -37,8 +37,8 @@ function ProductDisplay({ product }) {
           <p>123</p>
         </div>
         <div className="product-display-right-prices">
-          <div className="product-display-right-price-old">${product.old_price}</div>
-          <div className='product-display-right-price-new'>${product.new_price}</div>
+          <div className="product-display-right-price-old">{product.old_price} lei</div>
+          <div className='product-display-right-price-new'>{product.new_price} lei</div>
 </div>
 <div className="product-display-right-description">
 Puloverul nostru tricotat din bumbac organic reprezintă echilibrul perfect între confort și stil. Realizat cu atenție la detalii, acest pulover este un element esențial în garderoba ta de sezon rece. Materialul său de înaltă calitate asigură o senzație plăcută pe piele și o căldură optimă.

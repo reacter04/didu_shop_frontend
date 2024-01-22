@@ -13,7 +13,6 @@ function Product() {
   const {allProducts} = useContext(ShopContext);
   const {prodId} = useParams();
 
-
   const product = allProducts.find((e) => e.id === Number(prodId));
 
   return <div>

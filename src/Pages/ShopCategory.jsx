@@ -12,7 +12,7 @@ function ShopCategory({ banner, category }) {
       <img className="shop-category-banner" src={banner} alt="" />
       <div className="shop-category-index-sort">
         <p>
-          <span>Arata 1-12</span>din {allProducts.length} de produse
+          <span>Arata 1-12 </span>din {allProducts.length} de produse
         </p>
         <div className="shop-category-sort">
           Soreaza dupa <img src={dropdown_icon} alt="dropIcon" />
