@@ -158,10 +158,13 @@
 @media (max-width:500px){
   .cart-items-format-main {
     display: none;
-    grid-template-columns: 0.5fr 3fr 0fr;
+    grid-template-columns: 0.5fr 3fr 1fr;
     gap: 10px;
   }
   .cart-items-format{
     display: grid;
+  }
+  .cart-items-remove-icon {
+    margin-left:0;
   }
 }

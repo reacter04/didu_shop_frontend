@@ -1,48 +1,66 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { createContext } from "react";
 import allProducts from "../Components/Assets/allProducts";
 
 export const ShopContext = createContext();
 
-const getDefaultCart = () => {
-  let cart = {};
-  allProducts.map((_, i) => (cart[i + 1] = 0));
-  return cart;
-};
+let defaultCart = Array.from({ length: allProducts.length }, (_, i) => ({
+  id: i + 1,
+  units: 0,
+  marime: "",
+}));
 
 const AppContext = ({ children }) => {
-  const [cartItems, setCartItems] = useState(getDefaultCart());
+  const [cartItems, setCartItems] = useState(defaultCart);
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const addToCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    setCartItems((prev) =>
+      prev.map((object) =>
+        object.id === itemId ? { ...object, units: object.units + 1 } : object
+      )
+    );
   };
 
+console.log(cartItems)
+
   const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    setCartItems((prev) =>
+      prev.map((object) =>
+        object.id === itemId ? { ...object, units: object.units - 1 } : object
+      )
+    );
   };
+
+  const totalQuantity = cartItems.reduce(
+    (total, item) => (total += item.units),
+    0
+  );
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
-    for (const item in cartItems){
-      if (cartItems[item] > 0) {
-        let itemInfo = allProducts.find(product => product.id === +(item))
-        totalAmount += itemInfo.new_price * cartItems[item]
-      }
-    }
-    return totalAmount
-   
+    cartItems.map(
+      (item) =>
+        item.units &&
+        (totalAmount +=
+          item.units *
+          allProducts.find((product) => product.id === item.id).new_price)
+    );
+    return totalAmount;
   };
 
-  const getTotalQuantity = () => {
-    let totalQuantity = 0 
-    for (const item in cartItems){
-     totalQuantity += cartItems[item]
-    }
-    return totalQuantity
-  }
-
-
-  const contextValues = { allProducts, cartItems, addToCart, removeFromCart, getTotalCartAmount ,getTotalQuantity};
+  const contextValues = {
+    allProducts,
+    cartItems,
+    totalQuantity,
+    addToCart,
+    removeFromCart,
+    getTotalCartAmount,
+  };
 
   return (
     <ShopContext.Provider value={contextValues}>

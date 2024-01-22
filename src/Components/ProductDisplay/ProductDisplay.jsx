@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState} from "react";
 import "./ProductDisplay.css";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
@@ -7,7 +7,8 @@ import { ShopContext } from "../../Context/ShopContext";
 function ProductDisplay({ product }) {
 
    const {addToCart} = useContext(ShopContext)
-
+   const [activeSize, setActiveSize] = useState("")
+   
 
   return (
     <div className="product-display">
@@ -45,11 +46,11 @@ Puloverul nostru tricotat din bumbac organic reprezintă echilibrul perfect înt
 <div className="product-display-right-size">
     <h1>Select size:</h1>
     <div className="product-display-right-sizes">
-        <div>S</div>
-        <div>M</div>
-        <div>L</div>
-        <div>XL</div>
-        <div>XXL</div>
+        <div onClick={()=>setActiveSize("S")} className={activeSize === "S"? "active-size" : ""}>S</div>
+        <div onClick={()=>setActiveSize("M")} className={activeSize === "M"? "active-size" : ""}>M</div>
+        <div onClick={()=>setActiveSize("L")} className={activeSize === "L"? "active-size" : ""}>L</div>
+        <div onClick={()=>setActiveSize("XL")} className={activeSize === "XL"? "active-size" : ""}>XL</div>
+        <div onClick={()=>setActiveSize("XXL")} className={activeSize === "XXL"? "active-size" : ""}>XXL</div>
     </div>
 </div>
 <button onClick={()=>{addToCart(product.id)}}>ADAUGA IN COS</button>

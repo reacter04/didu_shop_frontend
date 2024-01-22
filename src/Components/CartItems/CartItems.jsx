@@ -18,26 +18,34 @@ function CartItems() {
   return (
     <div className="cart-items">
       <div className="cart-items-format-main">
-        <p>Produse</p>
-        <p>Denumire produs</p>
+        <p>Produs</p>
+        <p>Denumire</p>
         <p>Pretul</p>
         <p>Canitate</p>
         <p>Total</p>
         <p>Sterge</p>
       </div>
       <hr />
-      {allProducts.map((e) => {
-        if (cartItems[e.id] > 0) {
+      {allProducts.map((e, i) => {
+        if (cartItems[i].units) {
           return (
             <div key={crypto.randomUUID()}>
               <div className="cart-items-format cart-items-format-main">
-                <Link to={`/product/${allProducts.id}`}><img className="cart-icon-product-icon" src={e.image} alt="" /></Link>
+                <div>
+                  <Link to={`/product/${e.id}`}>
+                    <img
+                      className="cart-icon-product-icon"
+                      src={e.image}
+                      alt=""
+                    />
+                  </Link>
+                </div>
                 <p>{e.name}</p>
                 <p>{e.new_price} lei</p>
                 <button className="cart-items-quantity">
-                  {cartItems[e.id]}
+                  {cartItems[i].units}
                 </button>
-                <p>{e.new_price * cartItems[e.id]} lei</p>
+                <p>{e.new_price * cartItems[i].units} lei</p>
                 <div>
                   <img
                     className="cart-items-remove-icon"
@@ -57,7 +65,7 @@ function CartItems() {
       })}
       <div className="cart-items-down">
         <div className="cart-items-total">
-          <h1>Total unitati</h1>
+          <h1>Total units</h1>
           <div>
             <div className="cart-items-total-item">
               <p>Suma totala</p>
@@ -78,7 +86,7 @@ function CartItems() {
               <h3>
                 {getTotalCartAmount() && getTotalCartAmount() < 1000
                   ? `${getTotalCartAmount() + 50}`
-                  : `${getTotalCartAmount()}`}{" "}
+                  : `${getTotalCartAmount()}`}
               </h3>
             </div>
           </div>

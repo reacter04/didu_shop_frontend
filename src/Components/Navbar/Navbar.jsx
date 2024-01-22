@@ -9,8 +9,9 @@ import dropdown_icon from "../Assets/nav_dropdown.png";
 
 function Navbar() {
   const [activItemMenu, setActivItemMenu] = useState("shop");
-  const { getTotalQuantity } = useContext(ShopContext);
+  const { totalQuantity } = useContext(ShopContext);
   const menuRef = useRef();
+  
   const dropDownToggle = (e) => {
     menuRef.current.classList.toggle("nav-menu-visible");
     e.target.classList.toggle("open");
@@ -54,7 +55,7 @@ function Navbar() {
         </Link>
         <Link to="/cart">
           <img src={cart_icon} alt="cartIcon" />
-          <div className="nav-cart-count">{getTotalQuantity()}</div>{" "}
+          <div className="nav-cart-count">{totalQuantity}</div>{" "}
         </Link>
       </div>
     </div>

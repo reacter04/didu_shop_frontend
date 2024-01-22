@@ -81,7 +81,22 @@
   border: 1px solid #ebebeb;
   border-radius: 3px;
   cursor: pointer;
+  transition: all 0.3;
 }
+
+
+.product-display-right-sizes div:hover {
+  background-color:#ebebeb
+}
+
+.product-display-right-sizes .active-size  {
+  background-color: #818181;
+}
+
+.product-display-right-sizes .active-size:hover  {
+  background-color: #818181;
+}
+
 
 .product-display-right button {
   padding: 20px 30px;
