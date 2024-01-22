@@ -3,8 +3,7 @@ import allProducts from "../Components/Assets/allProducts";
 
 export const ShopContext = createContext();
 
-let defaultCart = Array.from({ length: allProducts.length }, (_, i) => ({
-  id: i + 1,
+let defaultCart = Array.from({ length: allProducts.length }, () => ({
   s: 0,
   m: 0,
   l: 0,
@@ -13,10 +12,13 @@ let defaultCart = Array.from({ length: allProducts.length }, (_, i) => ({
 }));
 
 
-
 const AppContext = ({ children }) => {
   const [cartItems, setCartItems] = useState(defaultCart);
   const [activeSize, setActiveSize] = useState()
+
+
+console.log(defaultCart)
+
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -31,18 +33,16 @@ const AppContext = ({ children }) => {
   const handleAddToCart = (itemId) => {
     activeSize &&
     setCartItems((prev) =>
-      prev.map((object) =>
-        object.id === itemId ? { ...object, [activeSize]: object[activeSize] + 1 } : object
+      prev.map((object, indexOfObject) =>
+      indexOfObject + 1 === itemId ? { ...object, [activeSize]: object[activeSize] + 1 } : object
       )
     );
   };
 
-  const removeFromCart = (product, size) => {
-
-    console.log(cartItems, product)
+  const removeFromCart = (itemId, size) => {
     setCartItems((prev) =>
-    prev.map((object) =>
-      object.id === product.id ? { ...object, [size]: object[size] - 1 } : object
+    prev.map((object, indexOfObject) =>
+      indexOfObject + 1 === itemId? { ...object, [size]: object[size] - 1 } : object
     )
   );
   };

@@ -15,8 +15,6 @@ function CartItems() {
     setPromoCode("");
   };
 
-  const itemsWithIdZero = cartItems.map(item => ({ ...item, id: 0 }))
-  /*pentru a putea itera prin fiecare obiect si a afisa toate marimile, id-ul nu va fi luat in calcul la iterare*/ 
 
   return (
     <div className="cart-items">
@@ -30,7 +28,7 @@ function CartItems() {
       </div>
       <hr />
       {allProducts.map((e, i) => {
-       const eachProduct = itemsWithIdZero[i]
+       const eachProduct = cartItems[i]
        let sizeDivs = []
       for (let size in eachProduct) 
         if (eachProduct[size] > 0) {
@@ -46,7 +44,7 @@ function CartItems() {
                     />
                   </Link>
                 </div>
-                <p>{`${e.name} ${size.toUpperCase()}`}</p>
+                <p>{e.name} <strong>{size.toUpperCase()}</strong></p>
                 <p>{e.new_price} lei</p>
                 <button className="cart-items-quantity">
                   {eachProduct[size]}
@@ -56,7 +54,7 @@ function CartItems() {
                   <img
                     className="cart-items-remove-icon"
                     onClick={() => {
-                      removeFromCart({...eachProduct, id: e.id}, size);
+                      removeFromCart(e.id, size);
                     }}
                     src={remove_icon}
                     alt=""
