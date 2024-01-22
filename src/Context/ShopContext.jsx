@@ -11,57 +11,55 @@ let defaultCart = Array.from({ length: allProducts.length }, () => ({
   xxl: 0,
 }));
 
-
 const AppContext = ({ children }) => {
   const [cartItems, setCartItems] = useState(defaultCart);
-  const [activeSize, setActiveSize] = useState()
-
-
-console.log(defaultCart)
-
+  const [activeSize, setActiveSize] = useState();
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
-   
-  const handleSelectedSize = (size) =>{
-    setActiveSize(size)
-}
-
+  const handleSelectedSize = (size) => {
+    setActiveSize(size);
+  };
 
   const handleAddToCart = (itemId) => {
     activeSize &&
-    setCartItems((prev) =>
-      prev.map((object, indexOfObject) =>
-      indexOfObject + 1 === itemId ? { ...object, [activeSize]: object[activeSize] + 1 } : object
-      )
-    );
+      setCartItems((prev) =>
+        prev.map((object, indexOfObject) =>
+          indexOfObject + 1 === itemId
+            ? { ...object, [activeSize]: object[activeSize] + 1 }
+            : object
+        )
+      );
   };
 
   const removeFromCart = (itemId, size) => {
     setCartItems((prev) =>
-    prev.map((object, indexOfObject) =>
-      indexOfObject + 1 === itemId? { ...object, [size]: object[size] - 1 } : object
-    )
-  );
+      prev.map((object, indexOfObject) =>
+        indexOfObject + 1 === itemId
+          ? { ...object, [size]: object[size] - 1 }
+          : object
+      )
+    );
   };
 
   const totalQuantity = cartItems.reduce((total, item) => {
     total += item.s + item.m + item.l + item.xl + item.xxl;
     return total;
   }, 0);
-  
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
-    cartItems.map(
-      (item) =>
-        item.units &&
-        (totalAmount +=
-          item.units *
-          allProducts.find((product) => product.id === item.id).new_price)
-    );
+    cartItems.map((e, i) => {
+      const eachProduct = cartItems[i];
+      for (let size in eachProduct) {
+        if (eachProduct[size] > 0) {
+          totalAmount += eachProduct[size] * allProducts[i].new_price;
+        }
+      }
+      return null;
+    });
     return totalAmount;
   };
 
@@ -74,7 +72,7 @@ console.log(defaultCart)
     handleAddToCart,
     removeFromCart,
     getTotalCartAmount,
-    setActiveSize
+    setActiveSize,
   };
 
   return (
