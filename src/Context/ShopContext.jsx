@@ -12,7 +12,10 @@ let defaultCart = Array.from({ length: allProducts.length }, () => ({
 }));
 
 const AppContext = ({ children }) => {
-  const [cartItems, setCartItems] = useState(defaultCart);
+  const [cartItems, setCartItems] = useState(()=>{
+        const allItems = JSON.parse(localStorage.getItem("cartItems"))
+          return allItems? allItems : defaultCart
+  });
   const [activeSize, setActiveSize] = useState();
 
   useEffect(() => {

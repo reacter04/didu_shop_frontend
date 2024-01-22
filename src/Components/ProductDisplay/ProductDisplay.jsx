@@ -1,4 +1,4 @@
-import React, { useContext, useEffect} from "react";
+import React, { useState, useContext, useEffect} from "react";
 import "./ProductDisplay.css";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
@@ -6,8 +6,23 @@ import { ShopContext } from "../../Context/ShopContext";
 
 function ProductDisplay({ product }) {
 
-   const {handleAddToCart, handleSelectedSize, activeSize ,setActiveSize} = useContext(ShopContext)
-   
+  const {handleAddToCart, handleSelectedSize, activeSize ,setActiveSize} = useContext(ShopContext)
+
+  /*pentru gestionarea butonului de adaugare*/
+  const [buttonText, setButtonText] = useState('Adauga');
+  const [isAdded, setIsAdded] = useState(false);
+
+  const handleClick = () => {
+    if(activeSize){
+    setButtonText('Adaugat');
+    setIsAdded(true);
+    setTimeout(() => {
+      setButtonText('Adauga');
+      setIsAdded(false);
+    }, 300);
+  }};
+
+
    useEffect(()=>{setActiveSize("")}, [setActiveSize])
   
   return (
@@ -54,7 +69,7 @@ Puloverul nostru tricotat din bumbac organic reprezintă echilibrul perfect înt
     </div>
 </div>
 <div className="add-to-cart-container">
-<button className="add-to-cart-btn" onClick={()=>{handleAddToCart(product.id)}}>ADAUGA IN COS{!activeSize && <span className="add-to-cart-info">Alege marimea</span>}</button>
+<button className={`add-to-cart-btn ${isAdded? "product-added" : ""}`} onClick={()=>{handleAddToCart(product.id); handleClick()}}>{buttonText}{!activeSize && <span className="add-to-cart-info">Alege marimea</span>}</button>
 </div>
 <p className="product-display-right-category"><span>Categoria: </span>Femeie, Bluza, Scurta</p>
 <p className="product-display-right-category"><span>Taguri: </span>modern, original, nou</p>

@@ -133,7 +133,11 @@
   display: block;
 }
 
-
+.add-to-cart-btn.product-added {
+  background-color:#00bb00;
+  font-weight: 600;
+  
+}
 
 .product-display-right-category {
   margin-top: 10px;

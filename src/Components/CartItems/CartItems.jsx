@@ -69,7 +69,7 @@ function CartItems() {
       })}
       <div className="cart-items-down">
         <div className="cart-items-total">
-          <h1>Total units</h1>
+          <h1>Total unitati</h1>
           <div>
             <div className="cart-items-total-item">
               <p>Suma totala</p>
@@ -81,7 +81,7 @@ function CartItems() {
               <p>
                 {getTotalCartAmount() && getTotalCartAmount() < 1000
                   ? "50 lei"
-                  : "Gratis"}
+                  : " 🛒 > 1000 lei = GRATUIT"}
               </p>
             </div>
             <hr />
@@ -98,11 +98,11 @@ function CartItems() {
         </div>
         <div className="cart-items-promocode">
           <form onSubmit={handleSubmitPromoCode} action="">
-            <p>Daca aveti un cod promotional introduceti-l aici</p>
+            <p>Daca aveti un cod promotional introduceti-l aici inainte de finalizarea comenzii</p>
             <div className="cart-items-promobox">
               <input
                 type="text"
-                placeholder="Codul promotional din 12 caractere"
+                placeholder="Maxim 12 caractere"
                 value={promoCode}
                 onChange={(e) =>
                   e.target.value.length <= 12 && setPromoCode(e.target.value)
