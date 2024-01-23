@@ -14,6 +14,8 @@ let newCollection = [
     image: p1_img,
     new_price: 499,
     old_price: 799,
+    rating: "4.8",
+    votes: 53,
   },
   {
     id: 35,
@@ -21,6 +23,8 @@ let newCollection = [
     image: p2_img,
     new_price: 849,
     old_price: 1199,
+    rating: "4.7",
+    votes: 44,
   },
   {
     id: 14,
@@ -28,6 +32,8 @@ let newCollection = [
     image: p3_img,
     new_price: 599,
     old_price: 989,
+    rating: "4.9",
+    votes: 13,
   },
   {
     id: 8,
@@ -35,6 +41,8 @@ let newCollection = [
     image: p4_img,
     new_price: 999,
     old_price: 1499,
+    rating: "4.6",
+    votes: 25,
   },
   {
     id: 15,
@@ -42,6 +50,8 @@ let newCollection = [
     image: p5_img,
     new_price: 399,
     old_price: 789,
+    rating: "4.9",
+    votes: 46,
   },
   {
     id: 2,
@@ -49,6 +59,8 @@ let newCollection = [
     image: p6_img,
     new_price: 459,
     old_price: 799,
+    rating: "4.8",
+    votes: 65,
   },
   {
     id: 17,
@@ -56,6 +68,8 @@ let newCollection = [
     image: p7_img,
     new_price: 599,
     old_price: 899,
+    rating: "5",
+    votes: 23,
   },
   {
     id: 28,
@@ -63,6 +77,8 @@ let newCollection = [
     image: p8_img,
     new_price: 649,
     old_price: 999,
+    rating: "4.9",
+    votes: 56,
   },
 ];
 

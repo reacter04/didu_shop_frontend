@@ -43,6 +43,8 @@ let allProducts = [
     image: p1_img,
     new_price: 499,
     old_price: 899,
+    rating: "4.7",
+    votes: 114,
   },
   {
     id: 2,
@@ -51,6 +53,8 @@ let allProducts = [
     image: p2_img,
     new_price: 499,
     old_price: 1199,
+    rating: "4.8",
+    votes: 145,
   },
   {
     id: 3,
@@ -59,6 +63,8 @@ let allProducts = [
     image: p3_img,
     new_price: 599,
     old_price: 649,
+    rating: "4.6",
+    votes: 81,
   },
   {
     id: 4,
@@ -67,6 +73,8 @@ let allProducts = [
     image: p4_img,
     new_price: 999,
     old_price: 1499,
+    rating: "4.9",
+    votes: 112,
   },
   {
     id: 5,
@@ -75,6 +83,8 @@ let allProducts = [
     image: p5_img,
     new_price: 849,
     old_price: 1199,
+    rating: "4.8",
+    votes: 98,
   },
   {
     id: 6,
@@ -83,6 +93,8 @@ let allProducts = [
     image: p6_img,
     new_price: 899,
     old_price: 1299,
+    rating: "4.8",
+    votes: 97
   },
   {
     id: 7,
@@ -91,6 +103,8 @@ let allProducts = [
     image: p7_img,
     new_price: 899,
     old_price: 1399,
+    rating: "4.1",
+    votes: 107,
   },
   {
     id: 8,
@@ -99,6 +113,8 @@ let allProducts = [
     image: p8_img,
     new_price: 899,
     old_price: 1299,
+    rating: "4.2",
+    votes: 72,
   },
   {
     id: 9,
@@ -107,6 +123,8 @@ let allProducts = [
     image: p9_img,
     new_price: 699,
     old_price: 1299,
+    rating: "4.9",
+    votes: 79,
   },
   {
     id: 10,
@@ -115,6 +133,8 @@ let allProducts = [
     image: p10_img,
     new_price: 729,
     old_price: 1199,
+    rating: "4.9",
+    votes: 101,
   },
   {
     id: 11,
@@ -123,6 +143,8 @@ let allProducts = [
     image: p11_img,
     new_price: 599,
     old_price: 699,
+    rating: "4.9",
+    votes: 98,
   },
   {
     id: 12,
@@ -131,6 +153,8 @@ let allProducts = [
     image: p12_img,
     new_price: 849,
     old_price: 1199,
+    rating: "4.0",
+    votes: 133,
   },
   {
     id: 13,
@@ -139,6 +163,8 @@ let allProducts = [
     image: p13_img,
     new_price: 549,
     old_price: 799,
+    rating: "4.9",
+    votes: 79,
   },
   {
     id: 14,
@@ -147,6 +173,8 @@ let allProducts = [
     image: p14_img,
     new_price: 399,
     old_price: 799,
+    rating: "4.9",
+    votes: 148,
   },
   {
     id: 15,
@@ -155,6 +183,8 @@ let allProducts = [
     image: p15_img,
     new_price: 679,
     old_price: 999,
+    rating: "4.6",
+    votes: 141,
   },
   {
     id: 16,
@@ -163,6 +193,8 @@ let allProducts = [
     image: p16_img,
     new_price: 499,
     old_price: 849,
+    rating: "4.7",
+    votes: 211,
   },
   {
     id: 17,
@@ -171,6 +203,8 @@ let allProducts = [
     image: p17_img,
     new_price: 899,
     old_price: 949,
+    rating: "4.9",
+    votes: 55,
   },
   {
     id: 18,
@@ -179,6 +213,8 @@ let allProducts = [
     image: p18_img,
     new_price: 689,
     old_price: 899,
+    rating: "4.8",
+    votes: 77,
   },
   {
     id: 19,
@@ -187,6 +223,8 @@ let allProducts = [
     image: p19_img,
     new_price: 829,
     old_price: 999,
+    rating: "4.4",
+    votes: 23,
   },
   {
     id: 20,
@@ -195,6 +233,8 @@ let allProducts = [
     image: p20_img,
     new_price: 999,
     old_price: 1499,
+    rating: "4.7",
+    votes: 64,
   },
   {
     id: 21,
@@ -203,6 +243,8 @@ let allProducts = [
     image: p21_img,
     new_price: 479,
     old_price: 589,
+    rating: "4.6",
+    votes: 120,
   },
   {
     id: 22,
@@ -211,6 +253,8 @@ let allProducts = [
     image: p22_img,
     new_price: 899,
     old_price: 1279,
+    rating: "4.2",
+    votes: 143,
   },
   {
     id: 23,
@@ -219,6 +263,8 @@ let allProducts = [
     image: p23_img,
     new_price: 729,
     old_price: 949,
+    rating: "4.2",
+    votes: 117,
   },
   {
     id: 24,
@@ -227,6 +273,8 @@ let allProducts = [
     image: p24_img,
     new_price: 399,
     old_price: 979,
+    rating: "4.9",
+    votes: 102,
   },
   {
     id: 25,
@@ -235,6 +283,8 @@ let allProducts = [
     image: p25_img,
     new_price: 679,
     old_price: 899,
+    rating: "4.9",
+    votes: 83,
   },
   {
     id: 26,
@@ -243,6 +293,8 @@ let allProducts = [
     image: p26_img,
     new_price: 549,
     old_price: 1199,
+    rating: "4.1",
+    votes: 87,
   },
   {
     id: 27,
@@ -251,6 +303,8 @@ let allProducts = [
     image: p27_img,
     new_price: 349,
     old_price: 699,
+    rating: "4.5",
+    votes: 45,
   },
   {
     id: 28,
@@ -259,6 +313,8 @@ let allProducts = [
     image: p28_img,
     new_price: 699,
     old_price: 1099,
+    rating: "4.6",
+    votes: 35,
   },
   {
     id: 29,
@@ -267,6 +323,8 @@ let allProducts = [
     image: p29_img,
     new_price: 699,
     old_price: 1099,
+    rating: "4.7",
+    votes: 81,
   },
   {
     id: 30,
@@ -275,6 +333,8 @@ let allProducts = [
     image: p30_img,
     new_price: 759,
     old_price: 929,
+    rating: "4.9",
+    votes: 39,
   },
   {
     id: 31,
@@ -283,6 +343,8 @@ let allProducts = [
     image: p31_img,
     new_price: 529,
     old_price: 1099,
+    rating: "4.9",
+    votes: 67,
   },
   {
     id: 32,
@@ -291,6 +353,8 @@ let allProducts = [
     image: p32_img,
     new_price: 649,
     old_price: 849,
+    rating: "4.5",
+    votes: 203,
   },
   {
     id: 33,
@@ -299,6 +363,8 @@ let allProducts = [
     image: p33_img,
     new_price: 599,
     old_price: 829,
+    rating: "4.4",
+    votes: 184,
   },
   {
     id: 34,
@@ -307,6 +373,8 @@ let allProducts = [
     image: p34_img,
     new_price: 489,
     old_price: 799,
+    rating: "5",
+    votes: 167,
   },
   {
     id: 35,
@@ -315,6 +383,8 @@ let allProducts = [
     image: p35_img,
     new_price: 849,
     old_price: 1299,
+    rating: "4.9",
+    votes: 155,
   },
   {
     id: 36,
@@ -323,6 +393,8 @@ let allProducts = [
     image: p36_img,
     new_price: 1199,
     old_price: 1299,
+    rating: "5",
+    votes: 105,
   },
 ];
 

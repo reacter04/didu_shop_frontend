@@ -1,17 +1,19 @@
 import React, { useState, useContext, useEffect } from "react";
 import "./ProductDisplay.css";
-import star_icon from "../Assets/star_icon.png";
-import star_dull_icon from "../Assets/star_dull_icon.png";
 import { ShopContext } from "../../Context/ShopContext";
+import StarRating from "../StarRating/StarRating";
 
 function ProductDisplay({ product }) {
-  const { handleAddToCart, handleSelectedSize, activeSize, setActiveSize } =
+  const { handleAddToCart, handleSelectedSize, activeSize, setActiveSize, votes} =
     useContext(ShopContext);
+
+    const isVotedEarly = votes.find((_, index) => index + 1 === product.id).voted
+    
 
   const [buttonText, setButtonText] = useState("Adauga");
   const [isAdded, setIsAdded] = useState(false);
 
-  const handleClick = () => {
+  const handleEffectsOnClickAdd = () => {
     if (activeSize) {
       setButtonText("Adaugat");
       setIsAdded(true);
@@ -25,6 +27,7 @@ function ProductDisplay({ product }) {
   useEffect(() => {
     setActiveSize("");
   }, [setActiveSize]);
+
 
   return (
     <div className="product-display">
@@ -46,12 +49,10 @@ function ProductDisplay({ product }) {
       <div className="product-display-right">
         <h1>{product.name}</h1>
         <div className="product-display-right-stars">
-          <img src={star_icon} alt="" />
-          <img src={star_icon} alt="" />
-          <img src={star_icon} alt="" />
-          <img src={star_icon} alt="" />
-          <img src={star_dull_icon} alt="" />
-          <p>123</p>
+          <StarRating 
+          productId = {product.id}
+          />
+          <span>/<strong>{product.rating}</strong> din {!isVotedEarly? product.votes: product.votes + 1} de recenzii/</span>
         </div>
         <div className="product-display-right-prices">
           <div className="product-display-right-price-old">
@@ -107,7 +108,7 @@ function ProductDisplay({ product }) {
               className={`add-to-cart-btn ${isAdded ? "product-added" : ""}`}
               onClick={() => {
                 handleAddToCart(product.id);
-                handleClick();
+                handleEffectsOnClickAdd();
               }}
             >
               {buttonText}

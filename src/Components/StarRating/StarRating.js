@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Star from "./Star";
+import { ShopContext } from "../../Context/ShopContext";
 
 const containerStyle = {
   display: "flex",
   alignItems: "center",
-  gap: "16px",
+  gap: "10px",
 };
 
 const starContainerStyle = {
@@ -15,18 +16,25 @@ const starContainerStyle = {
 export default function StarRating({
   maxRating = 5,
   color = "#fcc419",
-  size = 48,
+  size = 30,
   className = "",
   messages = [],
-  defaultRating = 0,
-  onSetRating,
+  productId,
 }) {
-  const [rating, setRating] = useState(defaultRating);
-  const [tempRating, setTempRating] = useState(0);
+  
+  const {votes, setVotes} = useContext(ShopContext)
 
-  function handleRating(rating) {
-    setRating(rating);
-    onSetRating(rating);
+
+  const defaultRating = () => {
+    const voteForProduct = votes.find((_, index) => index + 1 === productId);
+    return voteForProduct ? voteForProduct.rating : 0;
+  }
+
+  const [tempRating, setTempRating] = useState(defaultRating());
+
+  function handleVote(ratingValue) {
+    setVotes(prev => prev.map((item, i)  =>  i + 1 === productId ? {...item, voted: true, rating: ratingValue }: item))
+    
   }
 
   const textStyle = {
@@ -42,8 +50,8 @@ export default function StarRating({
         {Array.from({ length: maxRating }, (_, i) => (
           <Star
             key={i}
-            full={tempRating ? tempRating >= i + 1 : rating >= i + 1}
-            onRate={() => handleRating(i + 1)}
+            full={tempRating ? tempRating >= i + 1 : defaultRating() >= i + 1}
+            onRate={() => handleVote(i + 1)}
             onHoverIn={() => setTempRating(i + 1)}
             onHoverOut={() => setTempRating(0)}
             color={color}
@@ -53,8 +61,8 @@ export default function StarRating({
       </div>
       <p style={textStyle}>
         {messages.length === maxRating
-          ? messages[tempRating ? tempRating - 1 : rating - 1]
-          : tempRating || rating || ""}
+          ? messages[tempRating ? tempRating - 1 : defaultRating() - 1]
+          : tempRating || defaultRating() || ""}
       </p>
     </div>
   );

@@ -90,7 +90,7 @@ function CartItems() {
               <h3>
                 {getTotalCartAmount() && getTotalCartAmount() < 1000
                   ? `${getTotalCartAmount() + 50}`
-                  : `${getTotalCartAmount()}`}
+                  : `${getTotalCartAmount()} lei`}
               </h3>
             </div>
           </div>

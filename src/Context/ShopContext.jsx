@@ -11,12 +11,18 @@ let defaultCart = Array.from({ length: allProducts.length }, () => ({
   xxl: 0,
 }));
 
+let defaultVotes = Array.from({ length: allProducts.length }, (value) => value = {voted: false, rating: 0 });
+
+
+
 const AppContext = ({ children }) => {
-  const [cartItems, setCartItems] = useState(()=>{
-        const allItems = JSON.parse(localStorage.getItem("cartItems"))
-          return allItems? allItems : defaultCart
+  const [cartItems, setCartItems] = useState(() => {
+    const allItems = JSON.parse(localStorage.getItem("cartItems"));
+    return allItems ? allItems : defaultCart;
   });
   const [activeSize, setActiveSize] = useState();
+  const [votes, setVotes] = useState(defaultVotes)
+  
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -54,7 +60,7 @@ const AppContext = ({ children }) => {
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
-    cartItems.map((e, i) => {
+    cartItems.map((_, i) => {
       const eachProduct = cartItems[i];
       for (let size in eachProduct) {
         if (eachProduct[size] > 0) {
@@ -71,11 +77,13 @@ const AppContext = ({ children }) => {
     cartItems,
     totalQuantity,
     activeSize,
+    votes,
     handleSelectedSize,
     handleAddToCart,
     removeFromCart,
     getTotalCartAmount,
     setActiveSize,
+    setVotes,
   };
 
   return (
