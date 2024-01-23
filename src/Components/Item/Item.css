@@ -1,5 +1,6 @@
 .item {
   width: 280px;
+  padding: 3px;
 }
 .item img {
   width: 280px;
@@ -86,8 +87,4 @@
   }
 }
 
-/* poate voi pune si umbra pentru item imagini
-.item img {
-    box-shadow: 3px 3px 10px 1px #7a7a7a;
-    cursor: pointer;
-} */
+

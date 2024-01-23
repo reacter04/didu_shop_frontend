@@ -5,7 +5,7 @@ import dropdown_icon from "../Components/Assets/dropdown_icon.png";
 import Item from "../Components/Item/Item";
 
 function ShopCategory({ banner, category }) {
-  const {allProducts} = useContext(ShopContext);
+  const { allProducts } = useContext(ShopContext);
 
   return (
     <div className="shop-category">
@@ -27,16 +27,14 @@ function ShopCategory({ banner, category }) {
                 id={item.id}
                 name={item.name}
                 image={item.image}
-                new_price={item.new_price}
-                old_price={item.old_price}
+                newPrice={item.newPrice}
+                oldPrice={item.oldPrice}
               />
             );
           } else return null;
         })}
       </div>
-      <div className="shopcategory-load-more">
-        Arata mai mult
-      </div>
+      <div className="shopcategory-load-more">Arata mai mult</div>
     </div>
   );
 }

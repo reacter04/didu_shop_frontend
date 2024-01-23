@@ -1,14 +1,18 @@
 import React, { useState, useContext, useEffect } from "react";
 import "./ProductDisplay.css";
 import { ShopContext } from "../../Context/ShopContext";
-import StarRating from "../StarRating/StarRating";
+import StarRating from "../ReusableComponents/StarRating/StarRating";
 
 function ProductDisplay({ product }) {
-  const { handleAddToCart, handleSelectedSize, activeSize, setActiveSize, votes} =
-    useContext(ShopContext);
+  const {
+    handleAddToCart,
+    handleSelectedSize,
+    activeSize,
+    setActiveSize,
+    votes,
+  } = useContext(ShopContext);
 
-    const isVotedEarly = votes.find((_, index) => index + 1 === product.id).voted
-    
+  const isVotedEarly = votes.find((_, index) => index + 1 === product.id).voted;
 
   const [buttonText, setButtonText] = useState("Adauga");
   const [isAdded, setIsAdded] = useState(false);
@@ -27,7 +31,6 @@ function ProductDisplay({ product }) {
   useEffect(() => {
     setActiveSize("");
   }, [setActiveSize]);
-
 
   return (
     <div className="product-display">
@@ -49,25 +52,22 @@ function ProductDisplay({ product }) {
       <div className="product-display-right">
         <h1>{product.name}</h1>
         <div className="product-display-right-stars">
-          <StarRating 
-          productId = {product.id}
-          />
-          <span>/<strong>{product.rating}</strong> din {!isVotedEarly? product.votes: product.votes + 1} de recenzii/</span>
+          <StarRating productId={product.id} />
+          <span>
+            /<strong>{product.rating}</strong> din{" "}
+            {!isVotedEarly ? product.votes : product.votes + 1} de recenzii/
+          </span>
         </div>
         <div className="product-display-right-prices">
           <div className="product-display-right-price-old">
-            {product.old_price} lei
+            {product.oldPrice} lei
           </div>
           <div className="product-display-right-price-new">
-            {product.new_price} lei
+            {product.newPrice} lei
           </div>
         </div>
         <div className="product-display-right-description">
-          Puloverul nostru tricotat din bumbac organic reprezintă echilibrul
-          perfect între confort și stil. Realizat cu atenție la detalii, acest
-          pulover este un element esențial în garderoba ta de sezon rece.
-          Materialul său de înaltă calitate asigură o senzație plăcută pe piele
-          și o căldură optimă.
+          {product.shortDescription}
           <div className="product-display-right-size">
             <h1>Select size:</h1>
             <div className="product-display-right-sizes">

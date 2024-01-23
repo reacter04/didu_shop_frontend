@@ -9,14 +9,14 @@ function NewCollection() {
       <h1>COLECTIILE NOI</h1>
       <hr />
       <div className="collection">
-        {newCollection.map(item => (
+        {newCollection.map((item) => (
           <Item
             key={crypto.randomUUID()}
             id={item.id}
             name={item.name}
             image={item.image}
-            new_price={item.new_price}
-            old_price={item.old_price}
+            newPrice={item.newPrice}
+            oldPrice={item.oldPrice}
           />
         ))}
       </div>
