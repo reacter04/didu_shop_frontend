@@ -16,7 +16,7 @@ function DescriptionBox({ product }) {
         <div
           onClick={(e) => handleSelectedBox("description")}
           className={`description-box-nav-box ${
-            activeBox === "description" ? "fade" : ""
+            activeBox === "ratings" ? "fade" : ""
           }`}
         >
           Descriere
@@ -24,16 +24,16 @@ function DescriptionBox({ product }) {
         <div
           onClick={(e) => handleSelectedBox("ratings")}
           className={`description-box-nav-box ${
-            activeBox === "ratings" ? "fade" : ""
+            activeBox === "description" ? "fade" : ""
           }`}
         >
-          Recenzii {/* aici trebuie sa pun numarul real de recenzii*/}
+          Recenzii
         </div>
       </div>
       <div className="description-box-description">
-       {activeBox === "description" ? <p>
+       {activeBox === "description" ? 
           <TextExpander>{product.allDescription}</TextExpander>
-        </p> : <p>Nu sunt recenzii la acest produs</p>} 
+       : <p>Nu sunt recenzii la acest produs.</p>} 
       </div>
     </div>
   );

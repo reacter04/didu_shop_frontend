@@ -3,6 +3,8 @@ import allProducts from "../Components/Assets/allProducts";
 
 export const ShopContext = createContext();
 
+
+
 let defaultCart = Array.from({ length: allProducts.length }, () => ({
   s: 0,
   m: 0,

@@ -45,6 +45,11 @@
   font-size: 20px;
 }
 
+.ratings-container{
+  padding: 2px 5px;
+  box-shadow: 1px 1px 5px 0.5px rgb(166, 166, 166);
+}
+
 .product-display-right-prices {
   display: flex;
   margin: 40px 0;

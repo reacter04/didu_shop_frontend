@@ -53,10 +53,10 @@ function ProductDisplay({ product }) {
         <h1>{product.name}</h1>
         <div className="product-display-right-stars">
           <StarRating productId={product.id} />
-          <span>
-            /<strong>{product.rating}</strong> din{" "}
-            {!isVotedEarly ? product.votes : product.votes + 1} de recenzii/
-          </span>
+          <div className="ratings-container">
+            <strong>{product.rating}</strong> din{" "}
+            {!isVotedEarly ? product.votes : product.votes + 1} de recenzii
+          </div>
         </div>
         <div className="product-display-right-prices">
           <div className="product-display-right-price-old">
