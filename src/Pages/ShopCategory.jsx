@@ -14,7 +14,7 @@ function ShopCategory({ banner, category }) {
   const [loadedContent, setLoadedContent] = useState(numberOfAddedItems);
   const [sortingCriterion, setSortingCriterion] = useState("default");
   const [filteredProducts, setFilteredProducts] = useState(selectedProducts);
-  const visibleProducts = filteredProducts.slice(0, loadedContent);
+  
 
   const handleLoadMore = () => {
     loadedContent + numberOfAddedItems <= selectedProducts.length
@@ -37,7 +37,7 @@ function ShopCategory({ banner, category }) {
     }
   };
 
-  console.log(filteredProducts);
+  const visibleProducts = filteredProducts.slice(0, loadedContent);
 
   return (
     <div className="shop-category">

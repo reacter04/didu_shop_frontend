@@ -79,9 +79,7 @@ function CartItems() {
             <div className="cart-items-total-item">
               <p>Costul livarii</p>
               <p>
-                {getTotalCartAmount() && getTotalCartAmount() < 1000
-                  ? "50 lei"
-                  : ` 🛒 > 1000 lei = ${getTotalCartAmount() < 1000? <strong>Gratuit</strong> : "GRATUIT"}`}
+                {getTotalCartAmount() && getTotalCartAmount() < 1000 ? "50 lei" :  "🛒 > 1000 lei = GRATUIT"}
               </p>
             </div>
             <hr />
@@ -89,7 +87,7 @@ function CartItems() {
               <h3>Total</h3>
               <h3>
                 {getTotalCartAmount() && getTotalCartAmount() < 1000
-                  ? `${getTotalCartAmount() + 50}`
+                  ? `${getTotalCartAmount() + 50} lei`
                   : `${getTotalCartAmount()} lei`}
               </h3>
             </div>
