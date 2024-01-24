@@ -5,7 +5,7 @@ import Item from "../Item/Item";
 
 function NewCollection() {
   return (
-    <div className="new-collection">
+    <div className="new-collection" id="collection">
       <h1>COLECTIILE NOI</h1>
       <hr />
       <div className="collection">

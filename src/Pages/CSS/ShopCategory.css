@@ -110,7 +110,7 @@
     padding: 3px 8px;
   }
   .shop-category-sort select {
-    font-size: 11px;
+    font-size: 12px;
   }
   .shop-category-products {
     width: 95%;
@@ -125,7 +125,7 @@
 
 @media (max-width: 500px) {
   .shop-category-sort select {
-    font-size: 10px;
+    font-size: 12px;
   }
   .shop-category-products {
     grid-template-columns: 1fr 1fr;

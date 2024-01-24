@@ -5,12 +5,11 @@ import Offers from "../Components/Offers/Offers";
 import NewCollection from "../Components/NewCollection/NewCollection";
 import NewsLetter from "../Components/NewsLetter/NewsLetter";
 
-
 function Shop() {
   return <div>
    <Hero/>
    <Popular/>
-   <Offers/>
+   <Offers />
    <NewCollection/>
    <NewsLetter/>
   </div>;

@@ -8,6 +8,12 @@
   background: linear-gradient(180deg, #feb460d6, #ffffff 60%);
 };
 
+.offers a:link,
+.offers a:visited {
+  text-decoration: none;
+  color: black;
+}
+
 .offers-left-side {
   flex: 1;
   display: flex;

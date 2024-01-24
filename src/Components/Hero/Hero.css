@@ -52,6 +52,10 @@
   cursor: pointer;
 }
 
+.hero-latest-btn img {
+  height: 35%;
+}
+
 .hero-right {
   flex: 1;
   display: flex;
