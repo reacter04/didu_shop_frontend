@@ -2,10 +2,12 @@ import React, { useState, useContext } from "react";
 import "./CSS/ShopCategory.css";
 import { ShopContext } from "../Context/ShopContext";
 import Item from "../Components/Item/Item";
+import banner from "../Components/Assets/banner.png";
+import Timer from "../Components/ReusableComponents/Timer/Timer";
 
 const numberOfAddedItems = 4;
 
-function ShopCategory({ banner, category }) {
+function ShopCategory({ category }) {
   const { allProducts } = useContext(ShopContext);
   const selectedProducts = allProducts.filter(
     (item) => category === item.category && item
@@ -14,7 +16,6 @@ function ShopCategory({ banner, category }) {
   const [loadedContent, setLoadedContent] = useState(numberOfAddedItems);
   const [sortingCriterion, setSortingCriterion] = useState("default");
   const [filteredProducts, setFilteredProducts] = useState(selectedProducts);
-  
 
   const handleLoadMore = () => {
     loadedContent + numberOfAddedItems <= selectedProducts.length
@@ -41,7 +42,19 @@ function ShopCategory({ banner, category }) {
 
   return (
     <div className="shop-category">
-      <img className="shop-category-banner" src={banner} alt="" />
+      <div className="shop-category-banner">
+        <div className="shop-category-banner-left-side">
+          <h1>GRABESTE-TE!</h1>
+          <div className="discount-container">
+            <Timer/>
+            <div className="discount-account">
+              <span>pana la -</span>
+              <span>50%</span>
+            </div>
+          </div>
+        </div>
+        <img src={banner} alt="category" />
+      </div>
       <div className="shop-category-index-sort">
         <p>
           <span>{visibleProducts.length} </span>din {selectedProducts.length} de
@@ -51,6 +64,7 @@ function ShopCategory({ banner, category }) {
           <label htmlFor="sortOptions">Sorteaza dupa:</label>
           <select
             onChange={(e) => handleSelectedCriterion(e.target.value)}
+            id="sortOptions"
             name={sortingCriterion}
           >
             <option value="default">Sortare implicita</option>

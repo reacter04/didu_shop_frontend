@@ -23,9 +23,6 @@ function Navbar() {
         <Link to="/">
           <img src={logoul} alt="logoImage" />
         </Link>
-        <Link to="/">
-          <span>DIDU</span>
-        </Link>
       </div>
       <img
         className="nav-dropdown"

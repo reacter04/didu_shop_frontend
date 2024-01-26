@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css";
 import { Link } from "react-scroll";
-import hand_icon from "../Assets/hand_icon.png";
+import hourglass_start from "../Assets/hourglass_start.png";
 import arrow_icon from "../Assets/dropdown_icon.png";
 import hero_image from "../Assets/hero_image.png";
 
@@ -11,9 +11,9 @@ function Hero() {
       <div className="hero-left">
         <h2>Articole recent adaugate</h2>
         <div>
-          <div onClick={() => console.log(2)} className="hero-hend-icon">
+          <div className="hero-hourglass-icon">
             <p>ACUM</p>
-            <img src={hand_icon} alt="handIcon" />
+            <img src={hourglass_start} alt="hourglass" />
           </div>
           <p>colectii noi</p>
           <p>pentru fiecare</p>

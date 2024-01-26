@@ -1,6 +1,7 @@
 .item {
   width: 280px;
   padding: 3px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Umbra fină */
 }
 .item img {
   width: 280px;

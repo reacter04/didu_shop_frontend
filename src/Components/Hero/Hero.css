@@ -2,11 +2,13 @@
   height: 100vh;
   background: linear-gradient(180deg, #feb460d6, #ffffff 60%);
   display: flex;
+  box-shadow: inset 0 3px 6px -4px rgb(119, 119, 119);
 }
 
 .hero-left {
   flex: 1;
   display: flex;
+  max-width: 30%;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
@@ -22,18 +24,18 @@
 
 .hero-left p {
   color: #171717;
-  font-size: 68px;
+  font-size: 53px;
   font-weight: 700;
 }
 
-.hero-hend-icon {
+.hero-hourglass-icon {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.hero-hend-icon img {
-  width: 102px;
+.hero-hourglass-icon img {
+  width: 75px;
 }
 
 .hero-latest-btn {
@@ -58,9 +60,15 @@
 
 .hero-right {
   flex: 1;
+  max-width: 70%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.hero-right img {
+  max-width: 100%;
 }
 
 @media (max-width: 1280px) {
@@ -71,10 +79,10 @@
     font-size: 22px;
   }
   .hero-left p {
-    font-size: 60px;
+    font-size: 42px;
   }
-  .hero-hend-icon img {
-    width: 80px;
+  .hero-hourglass-icon img {
+    width: 70px;
   }
   .hero-latest-btn {
     gap: 10px;
@@ -83,23 +91,20 @@
     margin-top: 20px;
     font-size: 18px;
   }
-  .hero-right img {
-    width: 500px;
-  }
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .hero-left {
     padding-left: 80px;
   }
   .hero-left h2 {
-    font-size: 20px;
+    font-size: 15px;
   }
   .hero-left p {
-    font-size: 48px;
+    font-size: 32px;
   }
-  .hero-hend-icon img {
-    width: 65px;
+  .hero-hourglass-icon img {
+    width: 55px;
   }
   .hero-latest-btn {
     width: 220px;
@@ -107,59 +112,57 @@
     height: 50px;
     font-size: 16px;
   }
-  .hero-right img {
-    width: 380px;
-  }
 }
 
-
-@media (max-width:800px) {
+@media (max-width: 800px) {
   .hero-left {
     padding-left: 30px;
+    max-width: 40%;
+  }
+  .hero-right {
+    max-width: 60%;
   }
   .hero-left h2 {
     font-size: 16px;
   }
   .hero-left p {
-    font-size: 40px;
+    font-size: 35px;
   }
-  .hero-hend-icon img {
-    width: 50px;
+  .hero-hourglass-icon img {
+    width: 45px;
   }
   .hero-latest-btn {
     width: 175px;
     height: 40px;
     font-size: 13px;
   }
-  .hero-right img {
-    width: 300px;
-  }
 }
 
-@media (max-width:630px) {
-  .hero-right img {
-    width: 250px;
-  }
+@media (max-width: 630px) {
   .hero-left p {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 
-@media (max-width:500px) {
-  .hero{ 
+@media (max-width: 500px) {
+  .hero {
     flex-direction: column;
   }
   .hero-right {
-   display: none;
+    display: none;
+    max-width: 0;
   }
   .hero-left h2 {
     font-size: 18px;
   }
-  .hero-left p {
-    font-size: 50px;
+  .hero-left {
+    max-width: 100%;
   }
-  .hero-hend-icon img {
-    width: 55px;
+  .hero-left p {
+    font-size: 40px;
+  }
+  .hero-hourglass-icon img {
+    width: 50px;
   }
   .hero-latest-btn {
     width: 200;
@@ -167,4 +170,3 @@
     font-size: 14px;
   }
 }
-
