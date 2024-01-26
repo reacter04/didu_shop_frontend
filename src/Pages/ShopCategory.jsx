@@ -1,9 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext, useMemo } from "react";
 import "./CSS/ShopCategory.css";
 import { ShopContext } from "../Context/ShopContext";
 import Item from "../Components/Item/Item";
 import banner from "../Components/Assets/banner.png";
-import Timer from "../Components/ReusableComponents/Timer/Timer";
 
 const numberOfAddedItems = 4;
 
@@ -16,6 +15,14 @@ function ShopCategory({ category }) {
   const [loadedContent, setLoadedContent] = useState(numberOfAddedItems);
   const [sortingCriterion, setSortingCriterion] = useState("default");
   const [filteredProducts, setFilteredProducts] = useState(selectedProducts);
+  const [currentDate] = useState(new Date())
+
+  const remainingDays = useMemo(() => {
+    const untilDate = new Date('2024-02-29');
+    const differenceInMilliseconds = untilDate - currentDate;
+    const convertedRemainingDays = Math.ceil(differenceInMilliseconds / (1000 * 60 * 60 * 24));
+    return convertedRemainingDays;
+  }, [currentDate]); 
 
   const handleLoadMore = () => {
     loadedContent + numberOfAddedItems <= selectedProducts.length
@@ -44,9 +51,9 @@ function ShopCategory({ category }) {
     <div className="shop-category">
       <div className="shop-category-banner">
         <div className="shop-category-banner-left-side">
-          <h1>GRABESTE-TE!</h1>
+          <h1>Pana la 29.02.2024</h1>
           <div className="discount-container">
-            <Timer/>
+            <p>Inca {remainingDays} zile</p>
             <div className="discount-account">
               <span>pana la -</span>
               <span>50%</span>

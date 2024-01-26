@@ -6,7 +6,7 @@ import p4_img from "./product_4.png";
 let dataProduct = [
   {
     id: 1,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Bluză alba din bumbac natural, cu mâneci lungi",
     image: p1_img,
     newPrice: 399,
     oldPrice: 899,
@@ -19,7 +19,7 @@ let dataProduct = [
   },
   {
     id: 2,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Bluză alba din bumbac natural, cu mâneci lungi",
     image: p2_img,
     newPrice: 459,
     oldPrice: 879,
@@ -32,7 +32,7 @@ let dataProduct = [
   },
   {
     id: 3,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Bluză alba din bumbac natural, cu mâneci lungi",
     image: p3_img,
     newPrice: 549,
     oldPrice: 899,
@@ -45,7 +45,7 @@ let dataProduct = [
   },
   {
     id: 4,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Bluză alba din bumbac natural, cu mâneci lungi",
     image: p4_img,
     newPrice: 629,
     oldPrice: 1099,

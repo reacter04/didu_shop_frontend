@@ -10,7 +10,7 @@ import p8_img from "./product_28.png";
 let newCollection = [
   {
     id: 12,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Bluză alba din bumbac natural, cu mâneci lungi",
     image: p1_img,
     newPrice: 499,
     oldPrice: 799,
@@ -36,7 +36,7 @@ let newCollection = [
   },
   {
     id: 14,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     image: p3_img,
     newPrice: 599,
     oldPrice: 989,
@@ -49,7 +49,7 @@ let newCollection = [
   },
   {
     id: 8,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Bluză alba din bumbac natural, cu mâneci lungi",
     image: p4_img,
     newPrice: 999,
     oldPrice: 1499,
@@ -62,7 +62,7 @@ let newCollection = [
   },
   {
     id: 15,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     image: p5_img,
     newPrice: 399,
     oldPrice: 789,
@@ -75,7 +75,7 @@ let newCollection = [
   },
   {
     id: 2,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Bluză alba din bumbac natural, cu mâneci lungi",
     image: p6_img,
     newPrice: 459,
     oldPrice: 799,
@@ -88,7 +88,7 @@ let newCollection = [
   },
   {
     id: 17,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     image: p7_img,
     newPrice: 599,
     oldPrice: 899,

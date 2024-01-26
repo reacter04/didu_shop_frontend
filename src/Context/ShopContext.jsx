@@ -23,7 +23,6 @@ const AppContext = ({ children }) => {
   });
   const [votes, setVotes] = useState(defaultVotes);
   const [activeSize, setActiveSize] = useState();
-  const [totalSeconds, setTotalSeconds] = useState(80000);
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -33,13 +32,6 @@ const AppContext = ({ children }) => {
     setActiveSize(size);
   };
 
-  useEffect(() => {
-    const id = setInterval(() => {
-      setTotalSeconds((prevSeconds) => prevSeconds - 1);
-    }, 1000);
-
-    return () => clearInterval(id);
-  }, [setTotalSeconds]);
 
   const handleAddToCart = (itemId) => {
     activeSize &&
@@ -87,14 +79,12 @@ const AppContext = ({ children }) => {
     totalQuantity,
     activeSize,
     votes,
-    totalSeconds,
     handleSelectedSize,
     handleAddToCart,
     removeFromCart,
     getTotalCartAmount,
     setActiveSize,
     setVotes,
-    setTotalSeconds,
   };
 
   return (

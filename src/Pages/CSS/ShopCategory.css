@@ -22,6 +22,7 @@
   background-attachment: fixed;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
+  user-select: none;
 }
 
 .shop-category-banner-left-side h1 {
@@ -55,6 +56,28 @@
 .discount-account span:last-child {
   font-size: 25px;
 }
+
+
+.discount-account {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 28px 3px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+
+.discount-account span:first-child {
+  font-size: 8px;
+}
+
+.discount-account span:last-child {
+  font-size: 28px;
+}
+
 
 .shop-category-banner img {
   padding-top: 15px;
@@ -122,9 +145,22 @@
 }
 
 @media (max-width: 1280px) {
+
   .shop-category-banner {
     margin: 20px auto;
     width: 90%;
+  }
+  
+  .shop-category-banner-left-side h1 {
+    font-size: 27px;
+
+  }
+  .discount-account span:first-child {
+    font-size: 8px;
+  }
+  
+  .discount-account span:last-child {
+    font-size: 25px;
   }
   .shop-category-index-sort {
     width: 90%;
@@ -170,11 +206,13 @@
     padding: 10px 20px;
   }
   .shop-category-banner-left-side h1 {
-    font-size: 22px;
+    font-size: 18px;
   }
-
+  .discount-container p {
+    font-size: 14px;
+  }
   .discount-account span:last-child {
-    font-size: 20px;
+    font-size: 18px;
   }
   .shop-category-sort {
     padding: 2px 5px;
