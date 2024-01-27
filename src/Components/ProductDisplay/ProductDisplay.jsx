@@ -11,21 +11,17 @@ function ProductDisplay({ product }) {
     setActiveSize,
     votes,
   } = useContext(ShopContext);
-
-  const [buttonText, setButtonText] = useState("Adauga");
-  const [isAdded, setIsAdded] = useState(false);
-  const [activeImage, setActiveImage] = useState(0)
-
+  const [activeImage, setActiveImage] = useState(0);
+  const [addButtonActive, setAddButonActive] = useState(false);
+  const [addButtonClicked, setAddButtonClicked] = useState(false)
 
   const handleEffectsOnClickAdd = () => {
     if (activeSize) {
-      setButtonText("Adaugat");
-      setIsAdded(true);
+      setAddButonActive(true);
       setTimeout(() => {
-        setButtonText("Adauga");
-        setIsAdded(false);
+        setAddButonActive(false);
       }, 300);
-    }
+    } else {setAddButtonClicked(true)}
   };
 
   useEffect(() => {
@@ -38,16 +34,32 @@ function ProductDisplay({ product }) {
     <div className="product-display">
       <div className="product-display-left">
         <div className="product-display-img-list">
-          <img onClick={()=>setActiveImage(0)} src={product.images[0]} alt="" />
-          <img onClick={()=>setActiveImage(1)} src={product.images[1]} alt="" />
-          <img onClick={()=>setActiveImage(2)} src={product.images[2]} alt="" />
-          <img onClick={()=>setActiveImage(3)} src={product.images[3]} alt="" />
+          <img
+            onClick={() => setActiveImage(0)}
+            src={product.images[0]}
+            alt=""
+          />
+          <img
+            onClick={() => setActiveImage(1)}
+            src={product.images[1]}
+            alt=""
+          />
+          <img
+            onClick={() => setActiveImage(2)}
+            src={product.images[2]}
+            alt=""
+          />
+          <img
+            onClick={() => setActiveImage(3)}
+            src={product.images[3]}
+            alt=""
+          />
         </div>
         <div className="product-display-basic-img-container">
           <img
             className="product-display-basic-img"
             src={product.images[activeImage]}
-            alt=""
+            alt="product"
           />
         </div>
       </div>
@@ -107,15 +119,16 @@ function ProductDisplay({ product }) {
           </div>
           <div className="add-to-cart-container">
             <button
-              className={`add-to-cart-btn ${isAdded ? "product-added" : ""}`}
+              className={`add-to-cart-btn ${addButtonActive? "product-added" : ""}`}
               onClick={() => {
                 handleAddToCart(product.id);
                 handleEffectsOnClickAdd();
               }}
             >
-              {buttonText}
+              {addButtonActive? "Adaugat": "Adauga"}
               {!activeSize && (
-                <span className="add-to-cart-info">Alege marimea</span>
+                <span style={addButtonClicked ? { display: "block" } : {}} className="add-to-cart-info">Alege marimea</span>
+
               )}
             </button>
           </div>
