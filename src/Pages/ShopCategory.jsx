@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useMemo } from "react";
+import React, { useState,  useContext, useMemo } from "react";
 import "./CSS/ShopCategory.css";
 import { ShopContext } from "../Context/ShopContext";
 import Item from "../Components/Item/Item";
@@ -86,7 +86,7 @@ function ShopCategory({ category }) {
             key={crypto.randomUUID()}
             id={item.id}
             name={item.name}
-            image={item.image}
+            images={item.images}
             newPrice={item.newPrice}
             oldPrice={item.oldPrice}
           />

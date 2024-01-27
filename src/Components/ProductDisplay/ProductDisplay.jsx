@@ -12,10 +12,12 @@ function ProductDisplay({ product }) {
     votes,
   } = useContext(ShopContext);
 
-  const isVotedEarly = votes.find((_, index) => index + 1 === product.id).voted;
-
   const [buttonText, setButtonText] = useState("Adauga");
   const [isAdded, setIsAdded] = useState(false);
+  const [activeImage, setActiveImage] = useState(1)
+
+
+
 
   const handleEffectsOnClickAdd = () => {
     if (activeSize) {
@@ -32,19 +34,21 @@ function ProductDisplay({ product }) {
     setActiveSize("");
   }, [setActiveSize]);
 
+  const isVotedEarly = votes.find((_, index) => index + 1 === product.id).voted;
+
   return (
     <div className="product-display">
       <div className="product-display-left">
         <div className="product-display-img-list">
-          <img src={product.image} alt="" />
-          <img src={product.image} alt="" />
-          <img src={product.image} alt="" />
-          <img src={product.image} alt="" />
+          <img onClick={()=>setActiveImage(0)} src={product.images[0]} alt="" />
+          <img onClick={()=>setActiveImage(1)} src={product.images[1]} alt="" />
+          <img onClick={()=>setActiveImage(2)} src={product.images[2]} alt="" />
+          <img onClick={()=>setActiveImage(3)} src={product.images[3]} alt="" />
         </div>
-        <div className="product-display-img">
+        <div className="product-display-basic-img-container">
           <img
             className="product-display-basic-img"
-            src={product.image}
+            src={product.images[activeImage]}
             alt=""
           />
         </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Item.css";
 import { animateScroll } from "react-scroll";
 
-function Item({ id, name, image, newPrice, oldPrice, relatedItems = false }) {
+function Item({ id, name, images, newPrice, oldPrice, relatedItems = false }) {
   const scrollToTopSlowly = () => animateScroll.scrollToTop();
 
   return (
@@ -13,7 +13,7 @@ function Item({ id, name, image, newPrice, oldPrice, relatedItems = false }) {
           onClick={() =>
             relatedItems ? scrollToTopSlowly() : window.scrollTo(0, 0)
           }
-          src={image}
+          src={images[0]}
           alt=""
         />
       </Link>

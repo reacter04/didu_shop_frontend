@@ -2,45 +2,14 @@ import p1_img from "./product_1.png";
 import p2_img from "./product_2.png";
 import p3_img from "./product_3.png";
 import p4_img from "./product_4.png";
-import p5_img from "./product_5.png";
-import p6_img from "./product_6.png";
-import p7_img from "./product_7.png";
-import p8_img from "./product_8.png";
-import p9_img from "./product_9.png";
-import p10_img from "./product_10.png";
-import p11_img from "./product_11.png";
-import p12_img from "./product_12.png";
-import p13_img from "./product_13.png";
-import p14_img from "./product_14.png";
-import p15_img from "./product_15.png";
-import p16_img from "./product_16.png";
-import p17_img from "./product_17.png";
-import p18_img from "./product_18.png";
-import p19_img from "./product_19.png";
-import p20_img from "./product_20.png";
-import p21_img from "./product_21.png";
-import p22_img from "./product_22.png";
-import p23_img from "./product_23.png";
-import p24_img from "./product_24.png";
-import p25_img from "./product_25.png";
-import p26_img from "./product_26.png";
-import p27_img from "./product_27.png";
-import p28_img from "./product_28.png";
-import p29_img from "./product_29.png";
-import p30_img from "./product_30.png";
-import p31_img from "./product_31.png";
-import p32_img from "./product_32.png";
-import p33_img from "./product_33.png";
-import p34_img from "./product_34.png";
-import p35_img from "./product_35.png";
-import p36_img from "./product_36.png";
+
 
 let allProducts = [
   {
     id: 1,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
     category: "women",
-    image: p1_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 499,
     oldPrice: 899,
     rating: "4.7",
@@ -54,7 +23,7 @@ let allProducts = [
     id: 2,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
     category: "women",
-    image: p2_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 499,
     oldPrice: 1199,
     rating: "4.8",
@@ -68,7 +37,7 @@ let allProducts = [
     id: 3,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
     category: "women",
-    image: p3_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 599,
     oldPrice: 649,
     rating: "4.6",
@@ -82,7 +51,7 @@ let allProducts = [
     id: 4,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
     category: "women",
-    image: p4_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 999,
     oldPrice: 1499,
     rating: "4.9",
@@ -96,7 +65,7 @@ let allProducts = [
     id: 5,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
     category: "women",
-    image: p5_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 849,
     oldPrice: 1199,
     rating: "4.8",
@@ -110,7 +79,7 @@ let allProducts = [
     id: 6,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
     category: "women",
-    image: p6_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 899,
     oldPrice: 1299,
     rating: "4.8",
@@ -124,7 +93,7 @@ let allProducts = [
     id: 7,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
     category: "women",
-    image: p7_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 899,
     oldPrice: 1399,
     rating: "4.1",
@@ -138,7 +107,7 @@ let allProducts = [
     id: 8,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
     category: "women",
-    image: p8_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 899,
     oldPrice: 1299,
     rating: "4.2",
@@ -152,7 +121,7 @@ let allProducts = [
     id: 9,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
     category: "women",
-    image: p9_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 699,
     oldPrice: 1299,
     rating: "4.9",
@@ -166,7 +135,7 @@ let allProducts = [
     id: 10,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
     category: "women",
-    image: p10_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 729,
     oldPrice: 1199,
     rating: "4.9",
@@ -180,7 +149,7 @@ let allProducts = [
     id: 11,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
     category: "women",
-    image: p11_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 599,
     oldPrice: 699,
     rating: "4.9",
@@ -194,7 +163,7 @@ let allProducts = [
     id: 12,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
     category: "women",
-    image: p12_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 849,
     oldPrice: 1199,
     rating: "4.0",
@@ -208,7 +177,7 @@ let allProducts = [
     id: 13,
     name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     category: "men",
-    image: p13_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 549,
     oldPrice: 799,
     rating: "4.9",
@@ -222,7 +191,7 @@ let allProducts = [
     id: 14,
     name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     category: "men",
-    image: p14_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 399,
     oldPrice: 799,
     rating: "4.9",
@@ -236,7 +205,7 @@ let allProducts = [
     id: 15,
     name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     category: "men",
-    image: p15_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 679,
     oldPrice: 999,
     rating: "4.6",
@@ -250,7 +219,7 @@ let allProducts = [
     id: 16,
     name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     category: "men",
-    image: p16_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 499,
     oldPrice: 849,
     rating: "4.7",
@@ -264,7 +233,7 @@ let allProducts = [
     id: 17,
     name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     category: "men",
-    image: p17_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 899,
     oldPrice: 949,
     rating: "4.9",
@@ -278,7 +247,7 @@ let allProducts = [
     id: 18,
     name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     category: "men",
-    image: p18_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 689,
     oldPrice: 899,
     rating: "4.8",
@@ -292,7 +261,7 @@ let allProducts = [
     id: 19,
     name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     category: "men",
-    image: p19_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 829,
     oldPrice: 999,
     rating: "4.4",
@@ -306,7 +275,7 @@ let allProducts = [
     id: 20,
     name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     category: "men",
-    image: p20_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 999,
     oldPrice: 1499,
     rating: "4.7",
@@ -320,7 +289,7 @@ let allProducts = [
     id: 21,
     name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     category: "men",
-    image: p21_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 479,
     oldPrice: 589,
     rating: "4.6",
@@ -334,7 +303,7 @@ let allProducts = [
     id: 22,
     name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     category: "men",
-    image: p22_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 899,
     oldPrice: 1279,
     rating: "4.2",
@@ -348,7 +317,7 @@ let allProducts = [
     id: 23,
     name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     category: "men",
-    image: p23_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 729,
     oldPrice: 949,
     rating: "4.2",
@@ -362,7 +331,7 @@ let allProducts = [
     id: 24,
     name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
     category: "men",
-    image: p24_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 399,
     oldPrice: 979,
     rating: "4.9",
@@ -376,7 +345,7 @@ let allProducts = [
     id: 25,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p25_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 679,
     oldPrice: 899,
     rating: "4.9",
@@ -390,7 +359,7 @@ let allProducts = [
     id: 26,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p26_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 549,
     oldPrice: 1199,
     rating: "4.1",
@@ -404,7 +373,7 @@ let allProducts = [
     id: 27,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p27_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 349,
     oldPrice: 699,
     rating: "4.5",
@@ -418,7 +387,7 @@ let allProducts = [
     id: 28,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p28_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 699,
     oldPrice: 1099,
     rating: "4.6",
@@ -432,7 +401,7 @@ let allProducts = [
     id: 29,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p29_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 699,
     oldPrice: 1099,
     rating: "4.7",
@@ -446,7 +415,7 @@ let allProducts = [
     id: 30,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p30_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 759,
     oldPrice: 929,
     rating: "4.9",
@@ -460,7 +429,7 @@ let allProducts = [
     id: 31,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p31_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 529,
     oldPrice: 1099,
     rating: "4.9",
@@ -474,7 +443,7 @@ let allProducts = [
     id: 32,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p32_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 649,
     oldPrice: 849,
     rating: "4.5",
@@ -488,7 +457,7 @@ let allProducts = [
     id: 33,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p33_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 599,
     oldPrice: 829,
     rating: "4.4",
@@ -502,7 +471,7 @@ let allProducts = [
     id: 34,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p34_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 489,
     oldPrice: 799,
     rating: "5",
@@ -516,7 +485,7 @@ let allProducts = [
     id: 35,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p35_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 849,
     oldPrice: 1299,
     rating: "4.9",
@@ -530,7 +499,7 @@ let allProducts = [
     id: 36,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p36_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 1199,
     oldPrice: 1299,
     rating: "5",

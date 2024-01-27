@@ -14,7 +14,7 @@ function NewCollection() {
             key={crypto.randomUUID()}
             id={item.id}
             name={item.name}
-            image={item.image}
+            images={item.images}
             newPrice={item.newPrice}
             oldPrice={item.oldPrice}
           />

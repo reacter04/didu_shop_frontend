@@ -7,7 +7,7 @@ let dataProduct = [
   {
     id: 1,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
-    image: p1_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 399,
     oldPrice: 899,
     rating: "4.8",
@@ -20,7 +20,7 @@ let dataProduct = [
   {
     id: 2,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
-    image: p2_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 459,
     oldPrice: 879,
     rating: "4.7",
@@ -33,7 +33,7 @@ let dataProduct = [
   {
     id: 3,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
-    image: p3_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 549,
     oldPrice: 899,
     rating: "4.9",
@@ -46,7 +46,7 @@ let dataProduct = [
   {
     id: 4,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
-    image: p4_img,
+    images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 629,
     oldPrice: 1099,
     rating: "5",
