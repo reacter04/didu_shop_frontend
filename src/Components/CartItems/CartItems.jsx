@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./CartItems.css";
 import { ShopContext } from "../../Context/ShopContext";
-import remove_icon from "../Assets/cart_cross_icon.png";
+import remove_icon from "../Assets/icons/cart_cross_icon.png";
 
 function CartItems() {
   const [promoCode, setPromoCode] = useState("");

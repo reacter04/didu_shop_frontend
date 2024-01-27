@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Offers.css";
-import exclusive_image from "../Assets/exclusive_image.png";
+import exclusive_image from "../Assets/icons/exclusive_image.png";
 import { Link } from "react-router-dom";
 
 function Offers() {

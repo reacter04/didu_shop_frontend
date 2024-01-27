@@ -1,11 +1,11 @@
 import { useContext, useRef, useState } from "react";
 import React from "react";
 import "./Navbar.css";
-import logoul from "../Assets/logo.png";
-import cart_icon from "../Assets/cart_icon.png";
+import logoul from "../Assets/icons/logo.png";
+import cart_icon from "../Assets/icons/cart_icon.png";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
-import dropdown_icon from "../Assets/nav_dropdown.png";
+import dropdown_icon from "../Assets/icons/nav_dropdown.png";
 
 function Navbar() {
   const [activItemMenu, setActivItemMenu] = useState("shop");

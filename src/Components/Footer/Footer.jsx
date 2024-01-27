@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import logo from "../Assets/logo.png";
-import instaIcon from "../Assets/instagram_icon.png";
-import pinterestIcon from "../Assets/pintester_icon.png";
-import wattsupIcon from "../Assets/whatsapp_icon.png";
+import logo from "../Assets/icons/logo.png";
+import instaIcon from "../Assets/icons/instagram_icon.png";
+import pinterestIcon from "../Assets/icons/pintester_icon.png";
+import wattsupIcon from "../Assets/icons/whatsapp_icon.png";
 
 function Footer() {
   return (

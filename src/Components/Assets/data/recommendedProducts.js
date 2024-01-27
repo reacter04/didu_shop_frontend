@@ -18,7 +18,7 @@ import p14_img from "../photoData/product_14.png";
 import p15_img from "../photoData/product_15.png";
 import p16_img from "../photoData/product_16.png";
 
-let dataProduct = [
+let recommendedProducts = [
   {
     id: 1,
     name: "Bluză alba din bumbac natural, cu mâneci lungi",
@@ -73,4 +73,4 @@ let dataProduct = [
   },
 ];
 
-export default dataProduct;
+export default recommendedProducts;

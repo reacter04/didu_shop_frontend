@@ -1,9 +1,9 @@
 import React from "react";
 import "./Hero.css";
 import { Link } from "react-scroll";
-import hourglass_start from "../Assets/hourglass_start.png";
-import arrow_icon from "../Assets/dropdown_icon.png";
-import hero_image from "../Assets/hero_image.png";
+import hourglass_start from "../Assets/icons/hourglass_start.png";
+import arrow_icon from "../Assets/icons/dropdown_icon.png";
+import hero_image from "../Assets/icons/hero_image.png";
 
 function Hero() {
   return (

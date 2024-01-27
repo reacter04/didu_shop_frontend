@@ -1,6 +1,6 @@
 import React from "react";
 import "./Popular.css";
-import dataProduct from "../Assets/data/dataProduct";
+import recommendedProducts from "../Assets/data/recommendedProducts";
 import Item from "../Item/Item";
 
 function Popular() {
@@ -9,7 +9,7 @@ function Popular() {
       <h1>MODELE ORIGINALE PENTRU FEMEI</h1>
       <hr />
       <div className="popular-items">
-        {dataProduct.map((item) => (
+        {recommendedProducts.map((item) => (
           <Item
             key={crypto.randomUUID()}
             id={item.id}

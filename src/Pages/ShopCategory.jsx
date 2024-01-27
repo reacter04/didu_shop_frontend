@@ -2,7 +2,7 @@ import React, { useState, useContext, useMemo, useEffect } from "react";
 import "./CSS/ShopCategory.css";
 import { ShopContext } from "../Context/ShopContext";
 import Item from "../Components/Item/Item";
-import banner from "../Components/Assets/banner.png";
+import banner from "../Components/Assets/icons/banner.png";
 import { useSearchParams } from "react-router-dom";
 
 const numberOfAddedItems = 4;

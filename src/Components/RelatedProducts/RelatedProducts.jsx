@@ -1,6 +1,6 @@
 import React from "react";
 import "./RelatedProducts.css";
-import dataProducts from "../Assets/data/dataProduct";
+import recommendedProducts from "../Assets/data/recommendedProducts";
 import Item from "../Item/Item";
 
 function RelatedProducts() {
@@ -9,7 +9,7 @@ function RelatedProducts() {
       <h1>Produse recomandate</h1>
       <hr />
       <div className="related-products-items">
-        {dataProducts.map((item) => (
+        {recommendedProducts.map((item) => (
           <Item
             key={crypto.randomUUID()}
             id={item.id}
