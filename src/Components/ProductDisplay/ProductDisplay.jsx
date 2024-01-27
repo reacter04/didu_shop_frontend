@@ -14,7 +14,7 @@ function ProductDisplay({ product }) {
 
   const [buttonText, setButtonText] = useState("Adauga");
   const [isAdded, setIsAdded] = useState(false);
-  const [activeImage, setActiveImage] = useState(1)
+  const [activeImage, setActiveImage] = useState(0)
 
 
 
@@ -47,7 +47,6 @@ function ProductDisplay({ product }) {
         </div>
         <div className="product-display-basic-img-container">
           <img
-            className="product-display-basic-img"
             src={product.images[activeImage]}
             alt=""
           />

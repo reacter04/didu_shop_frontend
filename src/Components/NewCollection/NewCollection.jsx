@@ -1,6 +1,6 @@
 import React from "react";
 import "./NewCollection.css";
-import newCollection from "../Assets/newCollection";
+import newCollection from "../Assets/data/newCollection";
 import Item from "../Item/Item";
 
 function NewCollection() {

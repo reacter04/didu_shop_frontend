@@ -39,7 +39,7 @@ function CartItems() {
                   <Link to={`/product/${e.id}`}>
                     <img
                       className="cart-icon-product-icon"
-                      src={e.image}
+                      src={e.images[0]}
                       alt=""
                     />
                   </Link>
