@@ -10,7 +10,7 @@ const numberOfAddedItems = 4;
 function ShopCategory({ category }) {
   const { allProducts } = useContext(ShopContext);
   const selectedProductsByGender = allProducts.filter(
-    (item) => category === item.category && item
+    (item) => category === item.category
   );
 
   const [loadedContent, setLoadedContent] = useState(numberOfAddedItems);

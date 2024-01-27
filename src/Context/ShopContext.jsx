@@ -11,6 +11,7 @@ let defaultCart = Array.from({ length: allProducts.length }, () => ({
   xxl: 0,
 }));
 
+
 let defaultVotes = Array.from(
   { length: allProducts.length },
   (value) => (value = { voted: false, rating: 0 })

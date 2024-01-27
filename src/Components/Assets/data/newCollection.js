@@ -41,7 +41,7 @@ import p112_img from "../photoData/product_112.png";
 let newCollection = [
   {
     id: 12,
-    name: "Bluză alba din bumbac natural, cu mâneci lungi",
+    name: "Bluză din bumbac natural, cu mâneci lungi",
     images: [p45_img, p46_img, p47_img, p48_img],
     newPrice: 499,
     oldPrice: 799,
@@ -80,7 +80,7 @@ let newCollection = [
   },
   {
     id: 8,
-    name: "Bluză alba din bumbac natural, cu mâneci lungi",
+    name: "Bluză din bumbac natural, cu mâneci lungi",
     images: [p29_img, p30_img, p31_img, p32_img],
     newPrice: 999,
     oldPrice: 1499,
@@ -106,7 +106,7 @@ let newCollection = [
   },
   {
     id: 2,
-    name: "Bluză alba din bumbac natural, cu mâneci lungi",
+    name: "Bluză din bumbac natural, cu mâneci lungi",
     images: [p5_img, p6_img, p7_img, p8_img],
     newPrice: 459,
     oldPrice: 799,
