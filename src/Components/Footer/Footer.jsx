@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import logo from "../Assets/logo.png";
 import instaIcon from "../Assets/instagram_icon.png";
@@ -9,7 +10,13 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-logo">
-        <img src={logo} alt="footerLogo" />
+        <Link to={"/"}>
+          <img
+            onClick={()=>window.scrollTo(0, 0)}
+            src={logo}
+            alt="footerLogo"
+          />
+        </Link>
       </div>
       <ul className="footer-links">
         <li>Despre noi</li>

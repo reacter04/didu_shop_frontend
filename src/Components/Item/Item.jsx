@@ -4,14 +4,14 @@ import "./Item.css";
 import { animateScroll } from "react-scroll";
 
 function Item({ id, name, images, newPrice, oldPrice, relatedItems = false }) {
-  const scrollToTopSlowly = () => animateScroll.scrollToTop();
+   
 
   return (
     <div className="item">
       <Link to={`/product/${id}`} /* prodId */>
         <img
           onClick={() =>
-            relatedItems ? scrollToTopSlowly() : window.scrollTo(0, 0)
+            relatedItems ? animateScroll.scrollToTop() : window.scrollTo(0, 0)
           }
           src={images[0]}
           alt=""
