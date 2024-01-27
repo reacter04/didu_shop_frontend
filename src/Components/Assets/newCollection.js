@@ -19,7 +19,7 @@ let newCollection = [
   },
   {
     id: 35,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 849,
     oldPrice: 1199,
@@ -97,7 +97,7 @@ let newCollection = [
   },
   {
     id: 28,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 649,
     oldPrice: 999,

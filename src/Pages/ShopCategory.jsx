@@ -1,49 +1,61 @@
-import React, { useState,  useContext, useMemo } from "react";
+import React, { useState, useContext, useMemo, useEffect } from "react";
 import "./CSS/ShopCategory.css";
 import { ShopContext } from "../Context/ShopContext";
 import Item from "../Components/Item/Item";
 import banner from "../Components/Assets/banner.png";
+import { useSearchParams } from "react-router-dom";
 
 const numberOfAddedItems = 4;
 
 function ShopCategory({ category }) {
   const { allProducts } = useContext(ShopContext);
-  const selectedProducts = allProducts.filter(
+  const selectedProductsByGender = allProducts.filter(
     (item) => category === item.category && item
   );
 
   const [loadedContent, setLoadedContent] = useState(numberOfAddedItems);
-  const [sortingCriterion, setSortingCriterion] = useState("default");
-  const [filteredProducts, setFilteredProducts] = useState(selectedProducts);
-  const [currentDate] = useState(new Date())
+  const [filteredProducts, setFilteredProducts] = useState(
+    selectedProductsByGender
+  );
+  const [currentDate] = useState(new Date());
+  const [searchParams, setSearchParams] = useSearchParams();
+  const filteredByCriterion = searchParams.get("filteredBy");
 
   const remainingDays = useMemo(() => {
-    const untilDate = new Date('2024-02-29');
+    const untilDate = new Date("2024-02-29");
     const differenceInMilliseconds = untilDate - currentDate;
-    const convertedRemainingDays = Math.ceil(differenceInMilliseconds / (1000 * 60 * 60 * 24));
+    const convertedRemainingDays = Math.ceil(
+      differenceInMilliseconds / (1000 * 60 * 60 * 24)
+    );
     return convertedRemainingDays;
-  }, [currentDate]); 
+  }, [currentDate]);
 
   const handleLoadMore = () => {
-    loadedContent + numberOfAddedItems <= selectedProducts.length
+    loadedContent + numberOfAddedItems <= selectedProductsByGender.length
       ? setLoadedContent((prev) => prev + numberOfAddedItems)
-      : setLoadedContent(() => selectedProducts.length);
+      : setLoadedContent(() => selectedProductsByGender.length);
   };
 
-  const handleSelectedCriterion = (criterion) => {
-    setSortingCriterion(criterion);
-    let sortedProducts = [...filteredProducts];
-
+  const handleSelectedCriterion = (e) => {
+    e.preventDefault();
+    const criterion = e.target.value;
     if (criterion === "default") {
-      setFilteredProducts((prev) => [...prev]);
-    } else if (criterion === "new price") {
-      sortedProducts.sort((a, b) => a.newPrice - b.newPrice);
-      setFilteredProducts(sortedProducts);
-    } else if (criterion === "old price") {
-      sortedProducts.sort((a, b) => a.oldPrice - b.oldPrice);
-      setFilteredProducts(sortedProducts);
-    }
+      setSearchParams("");
+      setFilteredProducts(selectedProductsByGender);
+    } else setSearchParams({ filteredBy: `${criterion}` });
   };
+
+  useEffect(() => {
+    if (filteredByCriterion === "new-price") {
+      setFilteredProducts((prev) =>
+        prev.slice().sort((a, b) => a.newPrice - b.newPrice)
+      );
+    } else if (filteredByCriterion === "old-price") {
+      setFilteredProducts((prev) =>
+        prev.slice().sort((a, b) => a.oldPrice - b.oldPrice)
+      );
+    }
+  }, [filteredByCriterion]);
 
   const visibleProducts = filteredProducts.slice(0, loadedContent);
 
@@ -64,19 +76,19 @@ function ShopCategory({ category }) {
       </div>
       <div className="shop-category-index-sort">
         <p>
-          <span>{visibleProducts.length} </span>din {selectedProducts.length} de
-          produse
+          <span>{visibleProducts.length} </span>din{" "}
+          {selectedProductsByGender.length} de produse
         </p>
         <div className="shop-category-sort">
           <label htmlFor="sortOptions">Sorteaza dupa:</label>
           <select
-            onChange={(e) => handleSelectedCriterion(e.target.value)}
+            onChange={(e) => handleSelectedCriterion(e)}
             id="sortOptions"
-            name={sortingCriterion}
+            name={filteredByCriterion}
           >
             <option value="default">Sortare implicita</option>
-            <option value="new price">Pret nou</option>
-            <option value="old price">Pret vechi</option>
+            <option value="new-price">Pret nou</option>
+            <option value="old-price">Pret vechi</option>
           </select>
         </div>
       </div>
@@ -93,7 +105,7 @@ function ShopCategory({ category }) {
         ))}
       </div>
       <div onClick={() => handleLoadMore()} className="shopcategory-load-more">
-        {loadedContent === selectedProducts.length
+        {loadedContent === selectedProductsByGender.length
           ? "Nu mai sunt produse"
           : "Arata mai mult"}
       </div>

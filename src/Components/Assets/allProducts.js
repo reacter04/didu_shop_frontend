@@ -3,7 +3,6 @@ import p2_img from "./product_2.png";
 import p3_img from "./product_3.png";
 import p4_img from "./product_4.png";
 
-
 let allProducts = [
   {
     id: 1,
@@ -343,7 +342,7 @@ let allProducts = [
   },
   {
     id: 25,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     category: "kid",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 679,
@@ -357,7 +356,7 @@ let allProducts = [
   },
   {
     id: 26,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     category: "kid",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 549,
@@ -371,7 +370,7 @@ let allProducts = [
   },
   {
     id: 27,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     category: "kid",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 349,
@@ -385,7 +384,7 @@ let allProducts = [
   },
   {
     id: 28,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     category: "kid",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 699,
@@ -399,7 +398,7 @@ let allProducts = [
   },
   {
     id: 29,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     category: "kid",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 699,
@@ -413,7 +412,7 @@ let allProducts = [
   },
   {
     id: 30,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     category: "kid",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 759,
@@ -427,7 +426,7 @@ let allProducts = [
   },
   {
     id: 31,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     category: "kid",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 529,
@@ -441,7 +440,7 @@ let allProducts = [
   },
   {
     id: 32,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     category: "kid",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 649,
@@ -455,7 +454,7 @@ let allProducts = [
   },
   {
     id: 33,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     category: "kid",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 599,
@@ -469,7 +468,7 @@ let allProducts = [
   },
   {
     id: 34,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     category: "kid",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 489,
@@ -483,7 +482,7 @@ let allProducts = [
   },
   {
     id: 35,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     category: "kid",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 849,
@@ -497,7 +496,7 @@ let allProducts = [
   },
   {
     id: 36,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
     category: "kid",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 1199,
