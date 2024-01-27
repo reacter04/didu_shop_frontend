@@ -279,10 +279,15 @@
   .product-display-img-list img {
     height: 70px;
   }
-  .product-display-basic-img-container {
+  .product-display-basic-img-container img {
     width: auto;
-    height: 300px;
+    height: 330px;
   }
+  .product-display-basic-img-container {
+    align-items: center;
+    justify-content: center;
+  }
+
   .product-display-right h1 {
     font-size: 14px;
   }

@@ -17,8 +17,6 @@ function ProductDisplay({ product }) {
   const [activeImage, setActiveImage] = useState(0)
 
 
-
-
   const handleEffectsOnClickAdd = () => {
     if (activeSize) {
       setButtonText("Adaugat");
@@ -47,6 +45,7 @@ function ProductDisplay({ product }) {
         </div>
         <div className="product-display-basic-img-container">
           <img
+            className="product-display-basic-img"
             src={product.images[activeImage]}
             alt=""
           />
