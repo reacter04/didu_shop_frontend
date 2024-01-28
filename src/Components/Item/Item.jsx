@@ -4,7 +4,6 @@ import "./Item.css";
 import { animateScroll } from "react-scroll";
 
 function Item({ id, name, images, newPrice, oldPrice, relatedItems = false }) {
-   
 
   return (
     <div className="item">

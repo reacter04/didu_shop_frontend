@@ -4,6 +4,8 @@ import newCollection from "../Assets/data/newCollection";
 import Item from "../Item/Item";
 
 function NewCollection() {
+
+  newCollection.map(a => console.log(a.id))
   return (
     <div className="new-collection" id="collection">
       <h1>COLECTIILE NOI</h1>
