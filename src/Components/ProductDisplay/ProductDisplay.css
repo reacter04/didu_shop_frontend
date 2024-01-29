@@ -146,9 +146,14 @@
   display: block;
 }
 
+.add-to-cart-btn:hover{
+  background-color: #f92020;
+}
+
 .add-to-cart-btn.product-added {
   background-color:#00bb00;
   font-weight: 600;
+  opacity: 70%;
   
 }
 
