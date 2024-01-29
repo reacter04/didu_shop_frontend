@@ -17,10 +17,8 @@ function ShopCategory({ category }) {
   const [filteredProducts, setFilteredProducts] = useState(
     selectedProductsByGender
   );
-  const [currentDate] = useState(new Date());
   const [searchParams, setSearchParams] = useSearchParams();
-  const filteredByCriterion = searchParams.get("filteredBy");
-
+  const [currentDate] = useState(new Date());
   const remainingDays = useMemo(() => {
     const untilDate = new Date("2024-02-29");
     const differenceInMilliseconds = untilDate - currentDate;
@@ -29,6 +27,7 @@ function ShopCategory({ category }) {
     );
     return convertedRemainingDays;
   }, [currentDate]);
+  const filteredByCriterion = searchParams.get("filteredBy");
 
   const handleLoadMore = () => {
     loadedContent + numberOfAddedItems <= selectedProductsByGender.length
