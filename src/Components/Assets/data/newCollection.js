@@ -41,7 +41,7 @@ import p108_img from "../photoData/product_108.png";
 let newCollection = [
   {
     id: 12,
-    name: "Bluză din bumbac natural, cu mâneci lungi",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
     category: "women",
     images: [p45_img, p46_img, p47_img, p48_img],
     newPrice: 849,
@@ -83,7 +83,7 @@ let newCollection = [
   },
   {
     id: 8,
-    name: "Bluză din bumbac natural, cu mâneci lungi",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
     category: "women",
     images: [p29_img, p30_img, p31_img, p32_img],
     newPrice: 899,
@@ -111,7 +111,7 @@ let newCollection = [
   },
   {
     id: 2,
-    name: "Bluză din bumbac natural, cu mâneci lungi",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
     category: "women",
     images: [p5_img, p6_img, p7_img, p8_img],
     newPrice: 499,
