@@ -1,7 +1,7 @@
 .offers {
   display: flex;
   width: 65%;
-  height: 60vh;
+  height: 600px;
   margin: auto;
   padding: 0px 140px;
   margin-bottom: 150px;
@@ -26,7 +26,7 @@
 
 .offers-left-side h1 {
   color: #171717;
-  font-size: 65px;
+  font-size: 62px;
   font-weight: 500;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .offers-right-side img {
-  width: 280px;
+  width: 350px;
   height: auto;
 }
 
@@ -81,7 +81,7 @@
     font-size: 17px;
   }
   .offers-right-side img {
-    width: 300px;
+    width: 320px;
   }
   .offers-left-side button {
     width: 220px;
@@ -92,9 +92,9 @@
 
 @media (max-width: 1024px) {
   .offers {
+    height: 300px;
     padding: 0 60px;
     margin-bottom: 80px;
-    height: 40vh;
   }
   .offers-left-side h1 {
     font-size: 30px;
@@ -103,7 +103,7 @@
     font-size: 13px;
   }
   .offers-right-side img {
-    width: 200px;
+    width: 175px;
   }
   .offers-left-side button {
     width: 160px;
@@ -138,7 +138,7 @@
 
 @media (max-width: 500px) {
   .offers {
-    height: 25vh;
+    height: 190px;
     padding: 0 30px;
     margin-bottom: 50px;
   }
@@ -149,7 +149,7 @@
     display: none;
   }
   .offers-right-side img {
-    width: 120px;
+    width: 110px;
   }
   .offers-left-side button {
     width: 120px;

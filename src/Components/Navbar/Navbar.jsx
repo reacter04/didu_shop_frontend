@@ -26,8 +26,6 @@ function Navbar() {
     };
   }, []);
 
-
-
   const dropDownToggle = () => {
     menuRef.current.classList.toggle("nav-menu-visible");
     dropdownIconRef.current.classList.toggle("open");

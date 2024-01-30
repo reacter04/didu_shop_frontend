@@ -1,12 +1,12 @@
-import p45_img from "../photoData/product_45.png";
-import p46_img from "../photoData/product_46.png";
-import p47_img from "../photoData/product_47.png";
-import p48_img from "../photoData/product_48.png";
+import p17_img from "../photoData/product_17.png";
+import p18_img from "../photoData/product_18.png";
+import p19_img from "../photoData/product_19.png";
+import p20_img from "../photoData/product_20.png";
 
-import p97_img from "../photoData/product_97.png";
-import p98_img from "../photoData/product_98.png";
-import p99_img from "../photoData/product_99.png";
-import p100_img from "../photoData/product_100.png";
+import p69_img from "../photoData/product_69.png";
+import p70_img from "../photoData/product_70.png";
+import p71_img from "../photoData/product_71.png";
+import p72_img from "../photoData/product_72.png";
 
 import p53_img from "../photoData/product_53.png";
 import p54_img from "../photoData/product_54.png";
@@ -33,35 +33,35 @@ import p66_img from "../photoData/product_66.png";
 import p67_img from "../photoData/product_67.png";
 import p68_img from "../photoData/product_68.png";
 
-import p105_img from "../photoData/product_105.png";
-import p106_img from "../photoData/product_106.png";
-import p107_img from "../photoData/product_107.png";
-import p108_img from "../photoData/product_108.png";
+import p25_img from "../photoData/product_25.png";
+import p26_img from "../photoData/product_26.png";
+import p27_img from "../photoData/product_27.png";
+import p28_img from "../photoData/product_28.png";
 
 let newCollection = [
   {
-    id: 12,
+    id: 5,
     name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
     category: "women",
-    images: [p45_img, p46_img, p47_img, p48_img],
+    images: [p17_img, p18_img, p19_img, p20_img],
     newPrice: 849,
     oldPrice: 1199,
-    rating: "4.0",
-    votes: 133,
+    rating: "4.8",
+    votes: 98,
     shortDescription:
       "Acest articol vestimentar, creat cu meticulozitate și atenție la detalii, aduce în prim plan echilibrul perfect între confort și stil. Confectionat din bumbac organic, acest produs reprezintă o piesă esențială pentru garderoba ta, mai ales în sezonul rece.",
     allDescription:
       "Produsul nostru se evidențiază prin materialul său de înaltă calitate, oferind o senzație plăcută pe piele. Fiecare aspect al designului este atent ponderat, contribuind la durabilitatea și rezistența produsului. Indiferent de ocazie, acest articol vestimentar se integrează perfect în stilul tău personal, fiind versatil și potrivit pentru diverse contexte. Fie că te pregătești pentru o zi relaxantă acasă sau pentru o întâlnire în oraș, produsul nostru te învelește cu o căldură optimă, aducând un plus de confort experienței tale vestimentare. Descoperă o nouă dimensiune a eleganței și simplității în modul în care îți completezi garderoba. Articolul nostru vestimentar din bumbac organic devine astfel nu doar o piesă de îmbrăcăminte, ci o expresie a alegerilor tale în materie de calitate și rafinament.",
   },
   {
-    id: 25,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
-    category: "kid",
-    images: [p97_img, p98_img, p99_img, p100_img],
-    newPrice: 679,
+    id: 18,
+    name: "Geacă pentru bărbați, croială slim fit și închidere cu fermoar",
+    category: "men",
+    images: [p69_img, p70_img, p71_img, p72_img],
+    newPrice: 689,
     oldPrice: 899,
-    rating: "4.9",
-    votes: 83,
+    rating: "4.8",
+    votes: 77,
     shortDescription:
       "Acest articol vestimentar, creat cu meticulozitate și atenție la detalii, aduce în prim plan echilibrul perfect între confort și stil. Confectionat din bumbac organic, acest produs reprezintă o piesă esențială pentru garderoba ta, mai ales în sezonul rece.",
     allDescription:
@@ -138,14 +138,14 @@ let newCollection = [
       "Produsul nostru se evidențiază prin materialul său de înaltă calitate, oferind o senzație plăcută pe piele. Fiecare aspect al designului este atent ponderat, contribuind la durabilitatea și rezistența produsului. Indiferent de ocazie, acest articol vestimentar se integrează perfect în stilul tău personal, fiind versatil și potrivit pentru diverse contexte. Fie că te pregătești pentru o zi relaxantă acasă sau pentru o întâlnire în oraș, produsul nostru te învelește cu o căldură optimă, aducând un plus de confort experienței tale vestimentare. Descoperă o nouă dimensiune a eleganței și simplității în modul în care îți completezi garderoba. Articolul nostru vestimentar din bumbac organic devine astfel nu doar o piesă de îmbrăcăminte, ci o expresie a alegerilor tale în materie de calitate și rafinament.",
   },
   {
-    id: 27,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
-    category: "kid",
-    images: [p105_img, p106_img, p107_img, p108_img],
-    newPrice: 349,
-    oldPrice: 699,
-    rating: "4.5",
-    votes: 45,
+    id: 7,
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
+    category: "women",
+    images: [p25_img, p26_img, p27_img, p28_img],
+    newPrice: 899,
+    oldPrice: 1399,
+    rating: "4.1",
+    votes: 107,
     shortDescription:
       "Acest articol vestimentar, creat cu meticulozitate și atenție la detalii, aduce în prim plan echilibrul perfect între confort și stil. Confectionat din bumbac organic, acest produs reprezintă o piesă esențială pentru garderoba ta, mai ales în sezonul rece.",
     allDescription:

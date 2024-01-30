@@ -1,6 +1,6 @@
 .newsletter {
     width: 67%;
-    height: 40vh;
+    height: 460px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,6 +60,7 @@
 
 @media (max-width:1280px) {
     .newsletter{
+        height: 380px;
         padding: 0 80px;
         margin-bottom: 120px;
         gap: 20px;
@@ -85,6 +86,7 @@
 
 @media (max-width:1024px) {
     .newsletter{
+        height: 320px;
         margin-bottom: 60px;
         width: 72%;
     }
@@ -112,7 +114,7 @@
     .newsletter{
         padding: 0 50px;
         margin-bottom: 30px;
-        height: 35vh;
+        height: 250px;
     }
     .newsletter h1{
         font-size: 22px;
@@ -141,7 +143,7 @@
     .newsletter{
         padding: 0 20px;
         margin-bottom: 20px;
-        height: 30vh;
+        height: 200px;
         width: 80%;
     }
     .newsletter h1{
