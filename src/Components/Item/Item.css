@@ -1,11 +1,23 @@
 .item {
+  display: flex;
+  flex-direction: column;
   width: 280px;
   padding: 3px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Umbra fină */
 }
+
 .item img {
+  flex: 1;
   width: 280px;
 }
+
+.details-product {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .item p {
   margin: 6px 0px;
 }
@@ -30,7 +42,7 @@
 
 .item:hover {
   transform: scale(1.05);
-  transition: 0.6s;
+  transition: 0.4s ease;
 }
 
 @media (max-width: 1280px) {
@@ -62,12 +74,12 @@
 
 @media (max-width: 800px) {
   .item {
-    width: 120px;
+    width: 110px;
     font-size: 12px;
   }
 
   .item img {
-    width: 120px;
+    width: 110px;
   }
   .item-prices-old {
     font-size: 12px;
@@ -87,5 +99,3 @@
     font-size: 12px;
   }
 }
-
-

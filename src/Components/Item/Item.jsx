@@ -16,10 +16,12 @@ function Item({ id, name, images, newPrice, oldPrice, relatedItems = false }) {
           alt=""
         />
       </Link>
+      <div className="details-product">
       <p>{name}</p>
       <div className="item-prices">
         <div className="item-prices-new">{`${newPrice} lei`}</div>
         <div className="item-prices-old">{`${oldPrice} lei`}</div>
+      </div>
       </div>
     </div>
   );

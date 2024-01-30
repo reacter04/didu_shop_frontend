@@ -85,7 +85,7 @@ function ShopCategory({ category }) {
             id="sortOptions"
             name={filteredByCriterion}
           >
-            <option value="default">Sortare implicita</option>
+            <option value="default">Implicita</option>
             <option value="new-price">Pret nou</option>
             <option value="old-price">Pret vechi</option>
           </select>

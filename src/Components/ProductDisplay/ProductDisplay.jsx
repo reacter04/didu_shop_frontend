@@ -57,7 +57,6 @@ function ProductDisplay({ product }) {
         </div>
         <div className="product-display-basic-img-container">
           <img
-            className="product-display-basic-img"
             src={product.images[activeImage]}
             alt="product"
           />

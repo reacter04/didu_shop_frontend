@@ -315,7 +315,7 @@ let allProducts = [
   },
   {
     id: 13,
-    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
+    name: "Geacă pentru bărbați, croială slim fit și închidere cu fermoar",
     category: "men",
     images: [p49_img, p50_img, p51_img, p52_img],
     newPrice: 549,
@@ -329,7 +329,7 @@ let allProducts = [
   },
   {
     id: 14,
-    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
+    name: "Geacă pentru bărbați, croială slim fit și închidere cu fermoar",
     category: "men",
     images: [p53_img, p54_img, p55_img, p56_img],
     newPrice: 399,
@@ -343,7 +343,7 @@ let allProducts = [
   },
   {
     id: 15,
-    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
+    name: "Geacă pentru bărbați, croială slim fit și închidere cu fermoar",
     category: "men",
     images: [p57_img, p58_img, p59_img, p60_img],
     newPrice: 679,
@@ -357,7 +357,7 @@ let allProducts = [
   },
   {
     id: 16,
-    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
+    name: "Geacă pentru bărbați, croială slim fit și închidere cu fermoar",
     category: "men",
     images: [p61_img, p62_img, p63_img, p64_img],
     newPrice: 499,
@@ -371,7 +371,7 @@ let allProducts = [
   },
   {
     id: 17,
-    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
+    name: "Geacă pentru bărbați, croială slim fit și închidere cu fermoar",
     category: "men",
     images: [p65_img, p66_img, p67_img, p68_img],
     newPrice: 899,
@@ -385,7 +385,7 @@ let allProducts = [
   },
   {
     id: 18,
-    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
+    name: "Geacă pentru bărbați, croială slim fit și închidere cu fermoar",
     category: "men",
     images: [p69_img, p70_img, p71_img, p72_img],
     newPrice: 689,
@@ -399,7 +399,7 @@ let allProducts = [
   },
   {
     id: 19,
-    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
+    name: "Geacă pentru bărbați, croială slim fit și închidere cu fermoar",
     category: "men",
     images: [p73_img, p74_img, p75_img, p76_img],
     newPrice: 829,
@@ -413,7 +413,7 @@ let allProducts = [
   },
   {
     id: 20,
-    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
+    name: "Geacă pentru bărbați, croială slim fit și închidere cu fermoar",
     category: "men",
     images: [p77_img, p78_img, p79_img, p80_img],
     newPrice: 999,
@@ -427,7 +427,7 @@ let allProducts = [
   },
   {
     id: 21,
-    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
+    name: "Geacă pentru bărbați, croială slim fit și închidere cu fermoar",
     category: "men",
     images: [p81_img, p82_img, p83_img, p84_img],
     newPrice: 479,
@@ -441,7 +441,7 @@ let allProducts = [
   },
   {
     id: 22,
-    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
+    name: "Geacă pentru bărbați, croială slim fit și închidere cu fermoar",
     category: "men",
     images: [p85_img, p86_img, p87_img, p88_img],
     newPrice: 899,
@@ -455,7 +455,7 @@ let allProducts = [
   },
   {
     id: 23,
-    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
+    name: "Geacă pentru bărbați, croială slim fit și închidere cu fermoar",
     category: "men",
     images: [p89_img, p90_img, p91_img, p92_img],
     newPrice: 729,
@@ -469,7 +469,7 @@ let allProducts = [
   },
   {
     id: 24,
-    name: "Geacă pentru bărbați, croială slim fit și închidere completă cu fermoar",
+    name: "Geacă pentru bărbați, croială slim fit și închidere cu fermoar",
     category: "men",
     images: [p93_img, p94_img, p95_img, p96_img],
     newPrice: 399,
@@ -483,7 +483,7 @@ let allProducts = [
   },
   {
     id: 25,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
     category: "kid",
     images: [p97_img, p98_img, p99_img, p100_img],
     newPrice: 679,
@@ -497,7 +497,7 @@ let allProducts = [
   },
   {
     id: 26,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
     category: "kid",
     images: [p101_img, p102_img, p103_img, p104_img],
     newPrice: 549,
@@ -511,7 +511,7 @@ let allProducts = [
   },
   {
     id: 27,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
     category: "kid",
     images: [p105_img, p106_img, p107_img, p108_img],
     newPrice: 349,
@@ -525,7 +525,7 @@ let allProducts = [
   },
   {
     id: 28,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
     category: "kid",
     images: [p109_img, p110_img, p111_img, p112_img],
     newPrice: 699,
@@ -539,7 +539,7 @@ let allProducts = [
   },
   {
     id: 29,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
     category: "kid",
     images: [p113_img, p114_img, p115_img, p116_img],
     newPrice: 699,
@@ -553,7 +553,7 @@ let allProducts = [
   },
   {
     id: 30,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
     category: "kid",
     images: [p117_img, p118_img, p119_img, p120_img],
     newPrice: 759,
@@ -567,7 +567,7 @@ let allProducts = [
   },
   {
     id: 31,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
     category: "kid",
     images: [p121_img, p122_img, p123_img, p124_img],
     newPrice: 529,
@@ -581,7 +581,7 @@ let allProducts = [
   },
   {
     id: 32,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
     category: "kid",
     images: [p125_img, p126_img, p127_img, p128_img],
     newPrice: 649,
@@ -595,7 +595,7 @@ let allProducts = [
   },
   {
     id: 33,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
     category: "kid",
     images: [p129_img, p130_img, p131_img, p132_img],
     newPrice: 599,
@@ -609,7 +609,7 @@ let allProducts = [
   },
   {
     id: 34,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
     category: "kid",
     images: [p133_img, p134_img, p135_img, p136_img],
     newPrice: 489,
@@ -623,7 +623,7 @@ let allProducts = [
   },
   {
     id: 35,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
     category: "kid",
     images: [p137_img, p138_img, p139_img, p140_img],
     newPrice: 849,
@@ -637,7 +637,7 @@ let allProducts = [
   },
   {
     id: 36,
-    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi și guler semi-deschis",
+    name: "Hanorac pentru băieți din lâniță naturală, cu mâneci largi",
     category: "kid",
     images: [p141_img, p142_img, p143_img, p144_img],
     newPrice: 1199,

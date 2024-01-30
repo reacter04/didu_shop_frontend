@@ -23,7 +23,7 @@ function Hero() {
           spy={true}
           smooth={true}
           offset={0}
-          duration={1000}
+          duration={1600}
         >
           {" "}
           <div className="hero-latest-btn">
