@@ -147,7 +147,7 @@ import p144_img from "../photoData/product_144.png";
 let allProducts = [
   {
     id: 1,
-    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii, potrivită pentru diverse ocazii",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
     category: "women",
     images: [p1_img, p2_img, p3_img, p4_img],
     newPrice: 499,
@@ -161,7 +161,7 @@ let allProducts = [
   },
   {
     id: 2,
-    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
     category: "women",
     images: [p5_img, p6_img, p7_img, p8_img],
     newPrice: 499,
@@ -175,7 +175,7 @@ let allProducts = [
   },
   {
     id: 3,
-    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
     category: "women",
     images: [p9_img, p10_img, p11_img, p12_img],
     newPrice: 599,
@@ -189,7 +189,7 @@ let allProducts = [
   },
   {
     id: 4,
-    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
     category: "women",
     images: [p13_img, p14_img, p15_img, p16_img],
     newPrice: 999,
@@ -203,7 +203,7 @@ let allProducts = [
   },
   {
     id: 5,
-    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
     category: "women",
     images: [p17_img, p18_img, p19_img, p20_img],
     newPrice: 849,
@@ -217,7 +217,7 @@ let allProducts = [
   },
   {
     id: 6,
-    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
     category: "women",
     images: [p21_img, p22_img, p23_img, p24_img],
     newPrice: 899,
@@ -231,7 +231,7 @@ let allProducts = [
   },
   {
     id: 7,
-    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
     category: "women",
     images: [p25_img, p26_img, p27_img, p28_img],
     newPrice: 899,
@@ -245,7 +245,7 @@ let allProducts = [
   },
   {
     id: 8,
-    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
     category: "women",
     images: [p29_img, p30_img, p31_img, p32_img],
     newPrice: 899,
@@ -259,7 +259,7 @@ let allProducts = [
   },
   {
     id: 9,
-    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
     category: "women",
     images: [p33_img, p34_img, p35_img, p36_img],
     newPrice: 699,
@@ -273,7 +273,7 @@ let allProducts = [
   },
   {
     id: 10,
-    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
     category: "women",
     images: [p37_img, p38_img, p39_img, p40_img],
     newPrice: 729,
@@ -287,7 +287,7 @@ let allProducts = [
   },
   {
     id: 11,
-    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
     category: "women",
     images: [p41_img, p42_img, p43_img, p44_img],
     newPrice: 599,
@@ -301,7 +301,7 @@ let allProducts = [
   },
   {
     id: 12,
-    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii",
+    name: "Bluză din bumbac natural, cu mâneci lungi, potrivită pentru diverse ocazii.",
     category: "women",
     images: [p45_img, p46_img, p47_img, p48_img],
     newPrice: 849,
