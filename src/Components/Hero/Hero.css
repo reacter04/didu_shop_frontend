@@ -128,10 +128,10 @@
     max-width: 60%;
   }
   .hero-left h2 {
-    font-size: 16px;
+    font-size: 14px;
   }
   .hero-left p {
-    font-size: 35px;
+    font-size: 33px;
   }
   .hero-hourglass-icon img {
     width: 45px;
@@ -145,7 +145,7 @@
 
 @media (max-width: 630px) {
   .hero-left p {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 
